@@ -102,20 +102,17 @@ def f(t):
 ### 3.2 龙格库塔4阶 RK4
 
 根据$(3)$，RK4方法的**更新**可以表示为：
-$$
-y_{n+1}=y_n + \displaystyle\frac{h}{6}(k_1 + 2k_2 + 2k_3 + k4) \qquad (6)
-\\
-\\
-\begin{cases}
-k_1 = f(y_n, t_n)
-\\
-k_2=f(y_n + h\frac{k_1}{2}, t_n+\frac{h}{2})
-\\
-k_3=f(y_n + h\frac{k_2}{2}, t_n+\frac{h}{2})
-\\
-k_4=f(y_n+hk_3, t_n + h)
-\end{cases}
-$$
+
+$y_{n+1}=y_n + \displaystyle\frac{h}{6}(k_1 + 2k_2 + 2k_3 + k4) \qquad (6)$
+
+其中，
+
+$\left\{\begin{aligned} k_1 &= f(y_n, t_n) \\
+k_2 &=f(y_n + h\frac{k_1}{2}, t_n+\frac{h}{2}) \\
+k_3 &=f(y_n + h\frac{k_2}{2}, t_n+\frac{h}{2}) \\
+k_4&=f(y_n+hk_3, t_n + h)
+\end{aligned}
+\right.$
 
 ## 4. 二阶常微分方程例子
 
