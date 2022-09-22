@@ -1739,17 +1739,19 @@ $$
 v_{t+1}=v_t+\Delta t M^{-1}f(x_t+\Delta tv_{t+1}) \quad (3)
 $$
 线性化：由于公式<span class="arithmatex">\((3)\)</span>是一个非线性系统，对f()进行一届泰勒展开（牛顿方法的一个步骤）</p>
-<p>由于<span class="arithmatex">\(x_t\)</span>和<span class="arithmatex">\(v_t\)</span>都已知，需要求解的是<span class="arithmatex">\(v_{t+1}\)</span>，所以得到一个线性系统<span class="arithmatex">\((5)\)</span>
+<p>由于<span class="arithmatex">\(x_t\)</span>和<span class="arithmatex">\(v_t\)</span>都已知，需要求解的是<span class="arithmatex">\(v_{t+1}\)</span>，所以得到一个线性系统<span class="arithmatex">\((5)\)</span></p>
+<p><span class="arithmatex">\(\begin{aligned}&amp; v_{t+1}=v_t+\Delta t M^{-1}[f(x_t)+\frac{\partial f}{\partial x}(x_t)\Delta t v_{t+1}] \quad (4)\\ &amp; [I-\Delta t^2 M^{-1  }\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (5)
+\end{aligned}\)</span>
 $$
-\begin{align*}</p>
+\begin{aligned}</p>
 <p>&amp; v_{t+1}=v_t+\Delta t M^{-1}[f(x_t)+\frac{\partial f}{\partial x}(x_t)\Delta t v_{t+1}] \quad (4)
 \
-\
 &amp; [I-\Delta t^2 M^{-1   }\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (5)
-\end{align*}
+\end{aligned}
 $$</p>
 <h2 id="4">4. 积分器通用公式</h2>
-<p>对公式<span class="arithmatex">\((5)\)</span> 做一点小改动，加入<span class="arithmatex">\(\beta\)</span> 得到<span class="arithmatex">\((6)\)</span>
+<p>对公式<span class="arithmatex">\((5)\)</span> 做一点小改动，加入<span class="arithmatex">\(\beta\)</span> 得到<span class="arithmatex">\((6)\)</span></p>
+<p><span class="arithmatex">\([I-\beta\Delta t^2 M^{-1   }\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (6)\)</span>
 $$
 [I-\beta\Delta t^2 M^{-1    }\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (6)
 $$
