@@ -85,19 +85,23 @@ $$
 线性化：由于公式$(3)$是一个非线性系统，对f()进行一届泰勒展开（牛顿方法的一个步骤）
 
 由于$x_t$和$v_t$都已知，需要求解的是$v_{t+1}$，所以得到一个线性系统$(5)$
+
+$\begin{aligned}& v_{t+1}=v_t+\Delta t M^{-1}[f(x_t)+\frac{\partial f}{\partial x}(x_t)\Delta t v_{t+1}] \quad (4)\\ & [I-\Delta t^2 M^{-1	}\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (5)
+\end{aligned}$
 $$
-\begin{align*}
+\begin{aligned}
 
 & v_{t+1}=v_t+\Delta t M^{-1}[f(x_t)+\frac{\partial f}{\partial x}(x_t)\Delta t v_{t+1}] \quad (4)
 \\
-\\
 & [I-\Delta t^2 M^{-1	}\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (5)
-\end{align*}
+\end{aligned}
 $$
 
 ## 4. 积分器通用公式
 
 对公式$(5)$ 做一点小改动，加入$\beta$ 得到$(6)$
+
+$[I-\beta\Delta t^2 M^{-1	}\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (6)$
 $$
 [I-\beta\Delta t^2 M^{-1	}\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (6)
 $$
