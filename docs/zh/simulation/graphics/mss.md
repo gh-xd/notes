@@ -86,7 +86,7 @@ $$
 
 由于$x_t$和$v_t$都已知，需要求解的是$v_{t+1}$，所以得到一个线性系统$(5)$
 $$
-\begin{aligned}& v_{t+1}=v_t+\Delta t M^{-1}[f(x_t)+\frac{\partial f}{\partial x}(x_t)\Delta t v_{t+1}] \quad (4)\\ & [I-\Delta t^2 M^{-1	}\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (5)
+\begin{aligned}& v_{t+1}=v_t+\Delta t M^{-1}[f(x_t)+\frac{\partial f}{\partial x}(x_t)\Delta t v_{t+1}] \quad (4)\\\\ & [I-\Delta t^2 M^{-1	}\frac{\partial f}{\partial x}(x_t)]v_{t+1} = v_t+\Delta t M^{-1}f(x_t) \quad (5)
 \end{aligned}
 $$
 
