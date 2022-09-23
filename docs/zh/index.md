@@ -1,17 +1,12 @@
 # Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+:material-calendar-edit: 研究工作之外好玩技术与知识
 
-## Commands
+:material-math-cos: 记录技术实现需要的数学知识
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+:octicons-file-code-24: 解读部分技术的关键代码实现
 
-## Project layout
+:octicons-book-24: 后续读书和论文的笔记
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+:octicons-share-android-16: 知识分享
+

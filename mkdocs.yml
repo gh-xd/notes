@@ -3,7 +3,7 @@ site_url:
 docs_dir: 'docs/zh'
 
 nav:
-  - 网站介绍: about.md
+  - 网站介绍: index.md
   - 数学:
     - 微分算子: math/diff-operators.md
     - 常微分方程:
