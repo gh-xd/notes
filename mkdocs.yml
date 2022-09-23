@@ -1,10 +1,9 @@
-site_name: 学习笔记
+site_name: 研究笔记
 site_url:
 docs_dir: 'docs/zh'
 
 nav:
-  - Home: index.md
-  - About: about.md
+  - 网站介绍: about.md
   - 数学:
     - 微分算子: math/diff-operators.md
     - 常微分方程:
@@ -42,15 +41,21 @@ nav:
     - 有限元仿真:
       - simulation/fem/index.md
     - 有限状态机:
-      - simulation/fsm/index.md
+      - 概念: simulation/fsm/concept.md
   - 技术概念:
     - CI/CD: tech-concepts/cicd.md
     - MLOps:
       - tech-concepts/mlops/index.md
   - 工具:
     - Git: tools/git.md
+    - CMake:
+      - CMake流程: tools/cmake/workflow.md
+      - 链接工具: tools/cmake/totools.md
+      - 实用经验: tools/cmake/tips.md
     - 谷歌云平台:
-      - tools/gcp/index.md
+      - TFJob部署: tools/gcp/tfjob.md
+      - Canary部署: tools/gcp/canary-deploy.md
+      - Vertext AI: tools/gcp/vertex-ai.md
 
 theme:
   name: material # readthedocs
@@ -82,6 +87,9 @@ theme:
     - navigation.top
 
 markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.critic # text formatting
   - pymdownx.caret # text formatting
   - pymdownx.keys # text formatting
@@ -99,6 +107,7 @@ markdown_extensions:
   - pymdownx.emoji: # load emoji/icons
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
 
 extra_javascript:
   - javascripts/mathjax.js
