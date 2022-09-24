@@ -1129,6 +1129,8 @@
         
           
         
+          
+        
       
       
         
@@ -1335,16 +1337,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -1852,10 +1897,8 @@
 <ol>
 <li>
 <p>给出一个满足边界条件的表达式，表达式是一系列基函数的线性累加（线性插值），基函数满足边界条件，例如：</p>
-</li>
-<li>
-<p>设基函数为<span class="arithmatex">\(\phi_i,\ i=1,2,3\)</span></p>
-</li>
+<ul>
+<li>设基函数为<span class="arithmatex">\(\phi_i,\ i=1,2,3\)</span></li>
 <li>
 <p>其中：<span class="arithmatex">\(\phi_0=x,\ \phi_1=x,\ \phi_2=x^2\)</span></p>
 </li>
@@ -1865,25 +1908,25 @@
 <li>
 <p>于是，<span class="arithmatex">\(u(x)=a_0x+a_1x^2+a_2x^3\)</span></p>
 </li>
+</ul>
+</li>
 <li>
 <p>给定的微分方程和每一个在计算区域上加权积分为零（泛函中最小势能原理？），得到一系列加权值的方程</p>
-</li>
-<li>
-<p>对于物理方程<span class="arithmatex">\(E\displaystyle\frac{du(x)}{dx}-\frac{f(x)}{A}=0\)</span>，第1步中的<span class="arithmatex">\(u(x)\)</span>不一定就是真实函数</p>
-</li>
+<ul>
+<li>对于物理方程<span class="arithmatex">\(E\displaystyle\frac{du(x)}{dx}-\frac{f(x)}{A}=0\)</span>，第1步中的<span class="arithmatex">\(u(x)\)</span>不一定就是真实函数</li>
 <li>所以，需要要求上述函数与各基函数的内积为 0，内积可以理解为在同一个区域<span class="arithmatex">\(\Omega\)</span>的两个函数<span class="arithmatex">\(f\)</span>和<span class="arithmatex">\(g\)</span>的积分：<span class="arithmatex">\(\displaystyle\int_{\Omega}fgd\Omega=0\)</span></li>
 <li>具体得到：<span class="arithmatex">\(\displaystyle\int_0^L(E\displaystyle\frac{du(x)}{dx}-\frac{F}{A})\phi_jdx=0\)</span></li>
 <li>移向得到：<span class="arithmatex">\(\displaystyle\int_0^L\phi_j du(x)=\frac{1}{EA}\int_0^LF\phi_jdx\)</span></li>
-<li>
-<p>因为<span class="arithmatex">\(u(x)=a_0x+a_1x^2+a_2x^3\)</span>，带入可得<span class="arithmatex">\(\displaystyle\sum_{k=1}^3a_k\int\phi_jd\phi_k=\frac{1}{EA}\int_0^LF\phi_jdx\)</span></p>
+<li>因为<span class="arithmatex">\(u(x)=a_0x+a_1x^2+a_2x^3\)</span>，带入可得<span class="arithmatex">\(\displaystyle\sum_{k=1}^3a_k\int\phi_jd\phi_k=\frac{1}{EA}\int_0^LF\phi_jdx\)</span></li>
+</ul>
 </li>
 <li>
 <p>获得线性系统方程组<span class="arithmatex">\(Ax=b\)</span>，求<span class="arithmatex">\(x\)</span>，即求加权值。他们和基函数的点积就是在当前函数表达下的最贴近真实解的位移表达式</p>
-</li>
-<li>
-<p>根据第2步，可以得到<span class="arithmatex">\(\displaystyle\begin{bmatrix}\displaystyle\int_0^L\phi_1d\phi_1\quad \int_0^L\phi_1d\phi_2\quad\int_0^L\phi_1d\phi_3\\\displaystyle\int_0^L\phi_2d\phi_1\quad \int_0^L\phi_2d\phi_2\quad\int_0^L\phi_2d\phi_3\\\displaystyle\int_0^L\phi_3d\phi_1\quad \int_0^L\phi_3d\phi_2\quad\int_0^L\phi_3d\phi_3\end{bmatrix}\begin{bmatrix}a_1\\a_2\\a_3\end{bmatrix}=\displaystyle\frac{1}{EA}\begin{bmatrix}\displaystyle\int_0^LF\phi_1dx\\\displaystyle\int_0^LF\phi_2dx\\\displaystyle\int_0^LF\phi_3dx\end{bmatrix}\)</span></p>
-</li>
+<ul>
+<li>根据第2步，可以得到<span class="arithmatex">\(\displaystyle\begin{bmatrix}\displaystyle\int_0^L\phi_1d\phi_1\quad \int_0^L\phi_1d\phi_2\quad\int_0^L\phi_1d\phi_3\\\displaystyle\int_0^L\phi_2d\phi_1\quad \int_0^L\phi_2d\phi_2\quad\int_0^L\phi_2d\phi_3\\\displaystyle\int_0^L\phi_3d\phi_1\quad \int_0^L\phi_3d\phi_2\quad\int_0^L\phi_3d\phi_3\end{bmatrix}\begin{bmatrix}a_1\\a_2\\a_3\end{bmatrix}=\displaystyle\frac{1}{EA}\begin{bmatrix}\displaystyle\int_0^LF\phi_1dx\\\displaystyle\int_0^LF\phi_2dx\\\displaystyle\int_0^LF\phi_3dx\end{bmatrix}\)</span></li>
 <li>求解得到<span class="arithmatex">\(a_1,a_2,a_3\)</span>，获得<span class="arithmatex">\(u(x)\)</span>的表达式</li>
+</ul>
+</li>
 </ol>
 <h2 id="4">4. 伽辽金法二维的例子</h2>
 <p><em>关于薄板挠度和受力的例子，无法显示求解。</em></p>
@@ -1931,19 +1974,25 @@
 <p><span class="arithmatex">\(|_{u_0}\_\_\_Unit\_0\_\_\_|_{u_1}\_\_\_Unit\_1\_\_\_|_{u_2}\_\_\_Unit\_2\_\_\_|_{u_3}\)</span></p>
 <p>拿<span class="arithmatex">\(u_1\)</span>这个点来举例，因为它横跨了<span class="arithmatex">\(Unit0\)</span>和<span class="arithmatex">\(Unit1\)</span></p>
 <ol>
-<li>在<span class="arithmatex">\(Unit0\)</span>上</li>
+<li>在<span class="arithmatex">\(Unit0\)</span>上<ul>
 <li>节点<span class="arithmatex">\(u_0\)</span>对<span class="arithmatex">\(u_0\)</span>自己的贡献为<span class="arithmatex">\(A_{00}^0u_0\)</span></li>
 <li>节点<span class="arithmatex">\(u_0\)</span>对节点<span class="arithmatex">\(u_1\)</span>有贡献<span class="arithmatex">\(A_{10}^0u_0\)</span></li>
 <li>节点<span class="arithmatex">\(u_1\)</span>对<span class="arithmatex">\(u_1\)</span>自己的贡献为<span class="arithmatex">\(A_{11}^0u_1\)</span></li>
 <li><span class="arithmatex">\(b\)</span>则是该节点上的总贡献值</li>
 <li><span class="arithmatex">\(\begin{bmatrix}A_{00}^0\quad A_{01}^0\\A_{10}^0\quad A_{11}^0\end{bmatrix}\begin{bmatrix}u_0\\u_1\end{bmatrix}=\begin{bmatrix}b_0^0\\b_1^0\end{bmatrix}\)</span></li>
-<li>在<span class="arithmatex">\(Unit1\)</span>上</li>
+</ul>
+</li>
+<li>在<span class="arithmatex">\(Unit1\)</span>上<ul>
 <li><span class="arithmatex">\(u_1\)</span>对<span class="arithmatex">\(u_1\)</span>自己的贡献为<span class="arithmatex">\(A_{00}^1u_1\)</span></li>
 <li>节点<span class="arithmatex">\(u_2\)</span>对节点<span class="arithmatex">\(u_1\)</span>有贡献<span class="arithmatex">\(A_{01}^1u_2\)</span></li>
 <li><span class="arithmatex">\(\begin{bmatrix}A_{00}^1\quad A_{01}^1\\A_{10}^1\quad A_{11}^1\end{bmatrix}\begin{bmatrix}u_1\\u_2\end{bmatrix}=\begin{bmatrix}b_0^1\\b_1^1\end{bmatrix}\)</span></li>
-<li>在<span class="arithmatex">\(Unit2\)</span>上</li>
+</ul>
+</li>
+<li>在<span class="arithmatex">\(Unit2\)</span>上<ul>
 <li>同上</li>
 <li><span class="arithmatex">\(\begin{bmatrix}A_{00}^2\quad A_{01}^2\\A_{10}^2\quad A_{11}^2\end{bmatrix}\begin{bmatrix}u_2\\u_3\end{bmatrix}=\begin{bmatrix}b_0^2\\b_1^2\end{bmatrix}\)</span></li>
+</ul>
+</li>
 </ol>
 <p>关于节点<span class="arithmatex">\(u_k\)</span>的矩阵可以总结为：</p>
 <p><span class="arithmatex">\(\begin{bmatrix}&amp;u_k点对u_k点自己的贡献\quad u_{k+1}点对u_k点的贡献\\&amp;u_k点对u_{k+1}点的贡献\quad u_{k+1}点对u_{k+1}点自己的贡献\end{bmatrix}\begin{bmatrix}u_k\\u_{k+1}\end{bmatrix}=\begin{bmatrix}u_k处的总贡献值\\u_{k+1}处的总贡献值\end{bmatrix}\)</span></p>

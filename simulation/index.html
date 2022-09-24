@@ -998,6 +998,8 @@
         
           
         
+          
+        
       
       
         
@@ -1204,16 +1206,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -1639,6 +1684,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    物理仿真相关
+  </a>
+  
+    <nav class="md-nav" aria-label="物理仿真相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mpm" class="md-nav__link">
+    MPM简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sph" class="md-nav__link">
+    SPH简介
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1694,6 +1766,55 @@
 <p>例如图形学中的CFD、工程中的FEM，它们模拟的对象是连续介质的微观层面，有位置、时间、场的引入，是关于物理量本身的模拟仿真。而工厂和生产线的OEE、流程和成本的建模，涉及离散事件/流程的属性，以及通过流程关系和环境交互，最终仿真出离散系统的效果呈现，属于中等直观层面的模拟仿真。供应链的模拟也一样。市场竞争和人口动态学接触较少。</p>
 <p><img alt="sim" src="assets/sim.png" /></p>
 <p><strong>Fig. B</strong> 模拟仿真的一些应用举例</p>
+<h2 id="_4">物理仿真相关</h2>
+<p>物理仿真可以粗略地分为：</p>
+<ul>
+<li>有网格 - Mesh based<ul>
+<li>有限差分法 - Finite Difference Method (FDM)</li>
+<li>有限元法 - Finite Element Method (FEM)</li>
+<li>有限体积法 - Finite Volume Method (FVM)</li>
+</ul>
+</li>
+<li>无网格 - mesh-free / meshless<ul>
+<li>离散元法 - Discrete Element Method (DEM)</li>
+<li>物质点法 - Material Point Method (MPM)</li>
+<li>光滑粒子流体动力学 - Smoothed Particle Hydrodynamics (SPH)</li>
+</ul>
+</li>
+</ul>
+<h3 id="mpm">MPM简介</h3>
+<p>原理：建设中...</p>
+<p>应用：不同材料的仿真，例如水、奶酪、米等等</p>
+<p>常见方法：</p>
+<ul>
+<li>
+<p>粒子平动范式</p>
+<ul>
+<li>Particle-in-Cell (PIC), Affine Particle-in-Cell (APIC)</li>
+<li>Polynomial PIC (PolyPIC)</li>
+<li>Fluid Implicit Particles (FLIP)</li>
+</ul>
+</li>
+<li>
+<p>物质点</p>
+<ul>
+<li>Material Point Method (MPM)</li>
+<li>Moving Least Squares MPM (MLS-MPM)</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+<h3 id="sph">SPH简介</h3>
+<p>原理：SPH中颗粒并不会发生直接相互作用，而是通过<strong>核函数</strong>实现不同颗粒间的相互作用。</p>
+<p>应用：一般用于流体仿真，但是可以做固液耦合</p>
+<p>常见方法：</p>
+<ul>
+<li>弱可压缩SPH - Weakly Compressible SPH (WCSPH)</li>
+<li>Predictive-corrective Incompressible SPH (PCISPH)</li>
+<li>隐式不可压缩SPH - Implicit Incompressible SPH (IISPH)</li>
+<li>无散SPH - Divergence-free SPH (DFSPH)</li>
+</ul>
+<p>精度：？</p>
 
 
 

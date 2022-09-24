@@ -996,6 +996,8 @@
         
           
         
+          
+        
       
       
         
@@ -1202,16 +1204,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -1966,9 +2011,11 @@
 <p>给一个远程库增加别名：<code>git remote add &lt;别名&gt; &lt;远程库地址&gt;</code>，例如：</p>
 <ul>
 <li><code>git remote add origin https://github.com/xxxxx.git</code></li>
-<li>经过<code>git remote -v</code>查看有两个</li>
+<li>经过<code>git remote -v</code>查看有两个<ul>
 <li>fetch</li>
 <li>push</li>
+</ul>
+</li>
 </ul>
 <h2 id="_10">本地推送远程库</h2>
 <p><code>git push &lt;别名&gt; &lt;推送到哪个分支&gt;</code></p>
@@ -1978,10 +2025,12 @@
 <ol>
 <li>电脑中选择一个位置</li>
 <li><code>git clone &lt;远程仓库的地址&gt;</code></li>
-<li>克隆操作完成三个事情</li>
+<li>克隆操作完成三个事情<ol>
 <li>初始化本地库Git</li>
 <li>远程库内容完整到本地</li>
 <li>自动创建远程仓库的别名 <code>git remote -v</code></li>
+</ol>
+</li>
 </ol>
 <p>外人推送到Git项目，失败</p>
 <h2 id="_12">外人推送操作</h2>

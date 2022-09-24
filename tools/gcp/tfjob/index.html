@@ -996,6 +996,8 @@
         
           
         
+          
+        
       
       
         
@@ -1202,16 +1204,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../simulation/dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -1698,17 +1743,23 @@
 <li>获取集群证书 Credentials</li>
 <li>从Kubeflow获取TFJob清单</li>
 <li>创建Kubernetes命名空间并安装（给TFJob一个可以host的地方）</li>
-<li>创建云端储存</li>
+<li>创建云端储存<ul>
 <li>分布式训练脚本会将SavedModel储存到一个位置。代码也需要存放</li>
 <li>所以，开一个storage bucket，作为Google Cloud的全局资源</li>
-<li>准备TFJob</li>
+</ul>
+</li>
+<li>准备TFJob<ul>
 <li>从Github获取训练代码和manifest模板</li>
 <li>训练代码需要打包到docker镜像</li>
 <li>docker镜像需要推送到项目的容器注册</li>
-<li>更新TFJob的manifest</li>
+</ul>
+</li>
+<li>更新TFJob的manifest<ul>
 <li><code>tfjob.yaml</code>文件</li>
 <li>关键要定义tfReplicaSpecs中的Worker区域定义pod的数量</li>
 <li>也要在container区域定义其中的镜像位置</li>
+</ul>
+</li>
 <li>提交TFJob</li>
 <li>监测TFJob</li>
 </ol>

@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://gh-xd.github.io/notes/simulation/dem/</loc>
+         <lastmod>2022-09-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://gh-xd.github.io/notes/simulation/des/</loc>
          <lastmod>2022-09-24</lastmod>
          <changefreq>daily</changefreq>

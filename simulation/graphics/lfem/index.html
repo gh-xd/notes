@@ -998,6 +998,8 @@
         
           
         
+          
+        
       
       
         
@@ -1336,16 +1338,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -1858,10 +1903,10 @@
 <p><span class="arithmatex">\(\Phi - Deformation\;Map - 形变映射\)</span></p>
 <p><span class="arithmatex">\(F - Deformation\;Gradient - 形变梯度\)</span> </p>
 <p><span class="arithmatex">\(\varepsilon - Deformation\;tensor - 形变张量\)</span> </p>
-<p>​   0代表没有任何形变，不等于0代表由形变</p>
+<p>​ 0代表没有任何形变，不等于0代表由形变</p>
 <p><span class="arithmatex">\(\Psi(\varepsilon(F)) - Energy\;Density - 能量密度\)</span></p>
-<p>​   用张量定义的能量密度，有张量就有能量密度，没有张量就没有能量密度</p>
-<p>​   可以认为是张量的平方，或者是保体积的项</p>
+<p>​ 用张量定义的能量密度，有张量就有能量密度，没有张量就没有能量密度</p>
+<p>​ 可以认为是张量的平方，或者是保体积的项</p>
 <p><span class="arithmatex">\(E = \int \Psi - 对能量密度求积分\)</span></p>
 <p><span class="arithmatex">\(f = - \frac{\partial E}{\partial x} - 对位置求导\)</span></p>
 <p><span class="arithmatex">\(P -  Piola-Kirchhoff\;stress\;tensor - 能量密度\Psi对形变梯度F求导\)</span></p>
@@ -1968,10 +2013,12 @@ $$
 <p>根据这个定义，可以用给应变张量的<strong>本构模型(constitutive model)</strong>有：</p>
 <ul>
 <li>St. Venant-Kirchhoff模型：<span class="arithmatex">\(\varepsilon(F)=\frac{1}{2}(F^TF-I)\)</span></li>
-<li>Co-rotated线形模型：<span class="arithmatex">\(\varepsilon(F)=S-I, where\;F=RS\)</span></li>
+<li>Co-rotated线形模型：<span class="arithmatex">\(\varepsilon(F)=S-I, where\;F=RS\)</span><ul>
 <li>做<strong>极分解(Polar Decomposition)</strong></li>
 <li><span class="arithmatex">\(R\)</span>是一个旋转矩阵</li>
 <li>S是一个对称矩阵</li>
+</ul>
+</li>
 </ul>
 <p>结论，能量密度可以定义成应变<span class="arithmatex">\(\varepsilon\)</span>的平方</p>
 <p><span class="arithmatex">\(\Psi(\varepsilon)=\displaystyle\frac{1}{2}k||\varepsilon||_F^2\)</span>，没有应变=没有能量；有应变=有能量</p>

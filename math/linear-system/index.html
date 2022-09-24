@@ -1000,6 +1000,8 @@
         
           
         
+          
+        
       
       
         
@@ -1206,16 +1208,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -1737,10 +1782,14 @@
 <p><strong>使用</strong>：在建立某个程序的原型时可以使用</p>
 <p>注意事项</p>
 <ul>
-<li>时间复杂度</li>
+<li>时间复杂度<ul>
 <li>如果A是稠密矩阵，分解的时间复杂度也是<span class="arithmatex">\(O(n^3)\)</span></li>
-<li>所以，当A为稀疏矩阵的时候，该方法比求逆要好一些</li>
+</ul>
+</li>
+<li>所以，当A为稀疏矩阵的时候，该方法比求逆要好一些<ul>
 <li><strong>维度撑死不能超过100万</strong></li>
+</ul>
+</li>
 </ul>
 <h2 id="2">2. 迭代求解</h2>
 <h3 id="21">2.1 基于不动点</h3>
@@ -1752,6 +1801,8 @@
 <li>Multigrid</li>
 </ul>
 <h3 id="22-krylov-subspace">2.2 Krylov subspace方法</h3>
+<ul>
+<li>
 <p>共轭梯度 Conjugate gradient (CG) </p>
 <ul>
 <li>
@@ -1762,7 +1813,7 @@
 </li>
 <li>
 <p>求解效率依赖于一个kappa值：<span class="arithmatex">\(\kappa=\displaystyle\frac{\lambda_{max}}{\lambda_{min}}\)</span></p>
-</li>
+<ul>
 <li>
 <p><span class="arithmatex">\(\lambda\)</span>是<span class="arithmatex">\(A\)</span>矩阵的特征值，即最大特征值和最小特征值的比值</p>
 </li>
@@ -1773,10 +1824,22 @@
 <p>只需要二十行代码就可以搞定<img alt="🐶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f436.svg" title=":dog:" /></p>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
 <p>biCG</p>
+</li>
+<li>
 <p>CR</p>
+</li>
+<li>
 <p>MinRes</p>
+</li>
+<li>
 <p>GMRes</p>
+</li>
+</ul>
 <h2 id="3">3. 总结</h2>
 <p>当求解的规模相当大，例如<span class="arithmatex">\(1e^6\)</span>或者更多，比如求解1亿个粒子时，只能使用迭代求解器</p>
 <h2 id="_3">参考</h2>

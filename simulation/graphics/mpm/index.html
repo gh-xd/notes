@@ -998,6 +998,8 @@
         
           
         
+          
+        
       
       
         
@@ -1424,16 +1426,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -2036,14 +2081,34 @@
 <h3 id="12">1.2 方法一般流程</h3>
 <p>在混合拉格朗日-欧拉方法中，粒子是一等公民，网格是用来做计算和存储状态的。</p>
 <ol>
-<li>Particle-to-Grid transfer (P2G)</li>
-<li>Grid operations</li>
-<li>Pressure projection</li>
-<li>Boundary conditions</li>
-<li>Grid-to-Particle transfer (G2P)</li>
-<li>Particle operations</li>
-<li>Move particles</li>
-<li>Update material</li>
+<li>
+<p>Particle-to-Grid transfer (P2G)</p>
+</li>
+<li>
+<p>Grid operations</p>
+<ul>
+<li>
+<p>Pressure projection</p>
+</li>
+<li>
+<p>Boundary conditions</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Grid-to-Particle transfer (G2P)</p>
+</li>
+<li>
+<p>Particle operations</p>
+<ul>
+<li>
+<p>Move particles</p>
+</li>
+<li>
+<p>Update material</p>
+</li>
+</ul>
+</li>
 </ol>
 <h3 id="13-vs">1.3 欧拉网格vs拉格朗日粒子</h3>
 <table>
@@ -2091,10 +2156,12 @@
 <p>做P2G时，粒子并不会同等地对待附近的网格，而是取决于权重。一般权重的做法就是用核函数。</p>
 <p>核函数的例子：</p>
 <ul>
-<li>B-Spline kernels</li>
+<li>B-Spline kernels<ul>
 <li>Linear 线性插值</li>
 <li>Quadratic 二次插值</li>
 <li>Cubic 三次插值</li>
+</ul>
+</li>
 </ul>
 <p>P2G代码解释</p>
 <p>G2P代码解释</p>
@@ -2103,17 +2170,21 @@
 <li>P2G: scatter velocity from particle to grid</li>
 <li>Normalize velocity</li>
 <li>Pressure projection (e.g. Multigrid solver)</li>
-<li>G2P: gather divergence-free velocity from grid to particle</li>
+<li>G2P: gather divergence-free velocity from grid to particle<ul>
 <li>Move particles according to divergence-free velocity field</li>
 <li>RK2/3/4 if necessary</li>
+</ul>
+</li>
 </ol>
 <p>PIC的能量耗散比较严重。原因是，当做G2P的时候，假如是个3x3的网格系统一共9个grid，每个grid有两个自由度，即x和y方向，那么G2P数据传输之前等于一共有18个自由度（分量）。传输到单个粒子上，每个粒子只有2个自由度（分量），即x和y方向。这样就造成了信息丢失，即造成了能量耗散。所以，人们很少直接使用PIC。</p>
 <p>对于能量耗散，目前研究领域有两个解决方案：</p>
 <ol>
 <li>传输更多的数据：APIC, PolyPIC</li>
-<li>传输delta：FLIP</li>
+<li>传输delta：FLIP<ul>
 <li>不把所有的信息都通过grid进行传输，只传输一个delta</li>
 <li>在粒子上保留一些信息</li>
+</ul>
+</li>
 </ol>
 <h2 id="3-apic">3. APIC部分代码解读</h2>
 <p>对于下图，PIC方法值包含<span class="arithmatex">\(v_0\)</span>和<span class="arithmatex">\(v_1\)</span>两个常量，但是速度还有其他模式。例如：</p>
@@ -2128,19 +2199,19 @@
 <h3 id="31-p2g">3.1 P2G的操作</h3>
 <p>有一个affine的速度场，在从粒子到网格的速度转移过程中，出了粒子的速度<code>v[p]</code>的转移，还有一个<code>affine @ dpos</code>量的转移，这里使用的是矩阵乘法。数学公式的推导省略。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">base</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">*</span> <span class="n">inv_dx</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">fx</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">*</span> <span class="n">inv_dx</span> <span class="o">-</span> <span class="n">base</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.5</span> <span class="o">-</span> <span class="n">fx</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.75</span> <span class="o">-</span> <span class="p">(</span><span class="n">fx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">fx</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="n">base</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">*</span> <span class="n">inv_dx</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="n">fx</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">*</span> <span class="n">inv_dx</span> <span class="o">-</span> <span class="n">base</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.5</span> <span class="o">-</span> <span class="n">fx</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.75</span> <span class="o">-</span> <span class="p">(</span><span class="n">fx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">fx</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">]</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="n">affine</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="c1"># 这里有不同</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ti</span><span class="o">.</span><span class="n">static</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">ti</span><span class="o">.</span><span class="n">static</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="n">offset</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">Vector</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="n">dpos</span> <span class="o">=</span> <span class="p">(</span><span class="n">offset</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">-</span> <span class="n">fx</span><span class="p">)</span> <span class="o">*</span> <span class="n">dx</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="n">weight</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            <span class="n">grid_v</span><span class="p">[</span><span class="n">base</span> <span class="o">+</span> <span class="n">offset</span><span class="p">]</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+</span> <span class="n">affine</span> <span class="o">@</span> <span class="n">dpos</span><span class="p">)</span> <span class="c1"># 这里有不同</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="n">grid_m</span><span class="p">[</span><span class="n">base</span> <span class="o">+</span> <span class="n">offset</span><span class="p">]</span> <span class="o">+=</span> <span class="n">weight</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ti</span><span class="o">.</span><span class="n">static</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">ti</span><span class="o">.</span><span class="n">static</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      <span class="n">offset</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">Vector</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      <span class="n">dpos</span> <span class="o">=</span> <span class="p">(</span><span class="n">offset</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">-</span> <span class="n">fx</span><span class="p">)</span> <span class="o">*</span> <span class="n">dx</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      <span class="n">weight</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      <span class="n">grid_v</span><span class="p">[</span><span class="n">base</span> <span class="o">+</span> <span class="n">offset</span><span class="p">]</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+</span> <span class="n">affine</span> <span class="o">@</span> <span class="n">dpos</span><span class="p">)</span> <span class="c1"># 这里有不同</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      <span class="n">grid_m</span><span class="p">[</span><span class="n">base</span> <span class="o">+</span> <span class="n">offset</span><span class="p">]</span> <span class="o">+=</span> <span class="n">weight</span>
 </code></pre></div>
 <h3 id="32-g2p">3.2 G2P的操作</h3>
 <p>计算一个<code>new_C</code>，是每个网格对C的叠加，然后更新<code>C[p]</code>。这里计算<code>new_C</code>使用的是外积。数学公式的推导省略。</p>
@@ -2187,14 +2258,18 @@
 <p><img alt="MPM" src="../assets/MPM.png" /></p>
 <p>MPM方法在2018年的情况如图所示：</p>
 <ul>
-<li>在粒子这边可以研究本构模型/材料模型，例如</li>
+<li>在粒子这边可以研究本构模型/材料模型，例如<ul>
 <li>雪的材料模型</li>
 <li>泡沫的材料模型</li>
 <li>沙子的材料模型</li>
+</ul>
+</li>
 <li>在网格这边可以研究网格的方法</li>
-<li>在P2G和G2P上也有许多研究，例如前面提到的APIC等，此外还有</li>
+<li>在P2G和G2P上也有许多研究，例如前面提到的APIC等，此外还有<ul>
 <li>MLS-MPM</li>
 <li>Compatible PIC：用来处理材料切割，以及MPM和刚体的耦合</li>
+</ul>
+</li>
 </ul>
 <h3 id="61-mpm">6.1 MPM的优势</h3>
 <ul>

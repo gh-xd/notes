@@ -996,6 +996,8 @@
         
           
         
+          
+        
       
       
         
@@ -1202,16 +1204,59 @@
       
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../simulation/dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
           有限状态机
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_6">
           <span class="md-nav__icon md-icon"></span>
           有限状态机
         </label>
@@ -2152,18 +2197,24 @@
 </ul>
 <p>内容：</p>
 <ul>
-<li><strong>功能组件</strong>：创建一个<code>product_name()</code></li>
+<li><strong>功能组件</strong>：创建一个<code>product_name()</code><ul>
 <li><strong>输入</strong>：为<code>product name</code></li>
 <li><strong>处理</strong>：没有处理</li>
 <li><strong>输出</strong>：product name的<code>string</code></li>
-<li><strong>功能组件</strong>：创建一个<code>emoji()</code></li>
+</ul>
+</li>
+<li><strong>功能组件</strong>：创建一个<code>emoji()</code><ul>
 <li><strong>输入</strong>：表情包的<code>text description</code></li>
 <li><strong>处理</strong>：将表情包的文本转化为表情包，例如sparkle 到 <img alt="✨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2728.svg" title=":sparkles:" /></li>
 <li><strong>输出</strong>：表情包，例如<img alt="✨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2728.svg" title=":sparkles:" /></li>
-<li><strong>打包组件</strong>：创建一个<code>build_sentence()</code></li>
+</ul>
+</li>
+<li><strong>打包组件</strong>：创建一个<code>build_sentence()</code><ul>
 <li><strong>输入</strong>：前两个功能函数的输出</li>
 <li><strong>功能</strong>：用这两个输出（包含emoji表情包）构建一个句子</li>
 <li><strong>输出</strong>：带emoji表情的句子</li>
+</ul>
+</li>
 </ul>
 <h3 id="32">3.2 组件和函数</h3>
 <h4 id="product_name">功能组件 product_name()</h4>
@@ -2255,7 +2306,7 @@
 <h4 id="343-pipeline">3.4.3 运行pipeline</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">response</span> <span class="o">=</span> api_client.create_run_from_job_spec<span class="o">(</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="c1"># 使用前面生成的JSON来运行pipeline</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="c1"># 使用前面生成的JSON来运行pipeline</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="nv">job_spec_path</span><span class="o">=</span><span class="s2">&quot;intro_pipeline_job.json&quot;</span>,
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="c1"># pipeline_root=PIPELINE_ROOT  # this argument is necessary if you did not specify PIPELINE_ROOT as part of the pipeline definition.</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="o">)</span>
@@ -2388,7 +2439,7 @@
 <p>以下代码做了一些事情：</p>
 <ol>
 <li>定义pipeline需要的输入参数（需要手动设置，因为它们与其他组件的输出无关）</li>
-<li>一些与Vertext AI交互的内置组件</li>
+<li>一些与Vertext AI交互的内置组件<ul>
 <li><strong>TabularDatasetCreateOp</strong><ul>
 <li>输入：指定的数据源（来自Cloud Storage或者BigQuery）</li>
 <li>这个练习中，通过BigQuery table URL来传递数据</li>
@@ -2402,6 +2453,8 @@
 <li><strong>ModelDeployOp</strong><ul>
 <li>部署一个指定模型到Vertex AI的endpoint</li>
 <li>需要指定一些额外配置项，例如endpoint的机器类型、项目、模型等</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
