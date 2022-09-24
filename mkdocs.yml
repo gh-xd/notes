@@ -42,6 +42,8 @@ nav:
       - simulation/des/index.md
     - 有限元仿真:
       - simulation/fem/index.md
+    - 离散元:
+      - simulation/dem/index.md
     - 有限状态机:
       - 概念: simulation/fsm/concept.md
   - 技术概念:

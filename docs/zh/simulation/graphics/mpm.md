@@ -26,12 +26,19 @@ Material Point Method (MPM), Moving Least Squares MPM (MLS-MPM)
 在混合拉格朗日-欧拉方法中，粒子是一等公民，网格是用来做计算和存储状态的。
 
 1. Particle-to-Grid transfer (P2G)
+
 2. Grid operations
+
    - Pressure projection
+
    - Boundary conditions
-3. Grid-to-Particle transfer (G2P)
-4. Particle operations
+
+1. Grid-to-Particle transfer (G2P)
+
+2. Particle operations
+
    - Move particles
+
    - Update material
 
 ### 1.3 欧拉网格vs拉格朗日粒子

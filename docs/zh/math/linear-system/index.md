@@ -59,27 +59,30 @@ $x=A^{-1}b$
 
 ### 2.2 Krylov subspace方法
 
-共轭梯度 Conjugate gradient (CG) 
+- 共轭梯度 Conjugate gradient (CG) 
 
-- 当矩阵正定且对称时：$A=A^T$并且$A>0$
+  - 当矩阵正定且对称时：$A=A^T$并且$A>0$
 
-- 保证$n$次迭代一定能收敛
 
-- 求解效率依赖于一个kappa值：$\kappa=\displaystyle\frac{\lambda_{max}}{\lambda_{min}}$
+  - 保证$n$次迭代一定能收敛
 
-  + $\lambda$是$A$矩阵的特征值，即最大特征值和最小特征值的比值
 
-  - 如果$\kappa$很小，例如等于1的时候，共轭梯度非常非常非常好用
+  - 求解效率依赖于一个kappa值：$\kappa=\displaystyle\frac{\lambda_{max}}{\lambda_{min}}$
 
-  - 只需要二十行代码就可以搞定:dog:
+    + $\lambda$是$A$矩阵的特征值，即最大特征值和最小特征值的比值
 
-biCG
+    - 如果$\kappa$很小，例如等于1的时候，共轭梯度非常非常非常好用
 
-CR
+    - 只需要二十行代码就可以搞定:dog:
 
-MinRes
 
-GMRes
+- biCG
+
+- CR
+
+- MinRes
+
+- GMRes
 
 ## 3. 总结
 

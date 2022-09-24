@@ -52,3 +52,54 @@
 ![sim](./assets/sim.png)
 
 **Fig. B** 模拟仿真的一些应用举例
+
+
+
+## 物理仿真相关
+
+物理仿真可以粗略地分为：
+
+- 有网格 - Mesh based
+  - 有限差分法 - Finite Difference Method (FDM)
+  - 有限元法 - Finite Element Method (FEM)
+  - 有限体积法 - Finite Volume Method (FVM)
+- 无网格 - mesh-free / meshless
+  - 离散元法 - Discrete Element Method (DEM)
+  - 物质点法 - Material Point Method (MPM)
+  - 光滑粒子流体动力学 - Smoothed Particle Hydrodynamics (SPH)
+
+
+
+### MPM简介
+
+原理：建设中...
+
+应用：不同材料的仿真，例如水、奶酪、米等等
+
+常见方法：
+
+- 粒子平动范式
+  - Particle-in-Cell (PIC), Affine Particle-in-Cell (APIC)
+  - Polynomial PIC (PolyPIC)
+  - Fluid Implicit Particles (FLIP)
+
+- 物质点
+  - Material Point Method (MPM)
+  - Moving Least Squares MPM (MLS-MPM)
+  - ...
+
+
+### SPH简介
+
+原理：SPH中颗粒并不会发生直接相互作用，而是通过**核函数**实现不同颗粒间的相互作用。
+
+应用：一般用于流体仿真，但是可以做固液耦合
+
+常见方法：
+
+- 弱可压缩SPH - Weakly Compressible SPH (WCSPH)
+- Predictive-corrective Incompressible SPH (PCISPH)
+- 隐式不可压缩SPH - Implicit Incompressible SPH (IISPH)
+- 无散SPH - Divergence-free SPH (DFSPH)
+
+精度：？
