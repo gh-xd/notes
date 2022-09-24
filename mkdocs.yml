@@ -120,6 +120,6 @@ extra:
       link: /note/
       lang: en
     - name: 中文
-      link: /zh/
+      link: /notes-zh/
       lang: zh
 
