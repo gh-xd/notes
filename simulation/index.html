@@ -1672,15 +1672,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     模拟仿真应用例子
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1693,15 +1693,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#dem" class="md-nav__link">
+    DEM简述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mpm" class="md-nav__link">
-    MPM简介
+    MPM简述
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sph" class="md-nav__link">
-    SPH简介
+    SPH简述
   </a>
   
 </li>
@@ -1761,7 +1768,7 @@
 </ul>
 <p><img alt="classification" src="assets/classif.png" /></p>
 <p><strong>Fig. A</strong> 仿真建模中的主要范式</p>
-<h2 id="_3">模拟仿真应用例子</h2>
+<h3 id="_3">模拟仿真应用例子</h3>
 <p>应用的例子如图B，所有的应用都可以理解为仿真，但是其仿真建模之间的区别很大。</p>
 <p>例如图形学中的CFD、工程中的FEM，它们模拟的对象是连续介质的微观层面，有位置、时间、场的引入，是关于物理量本身的模拟仿真。而工厂和生产线的OEE、流程和成本的建模，涉及离散事件/流程的属性，以及通过流程关系和环境交互，最终仿真出离散系统的效果呈现，属于中等直观层面的模拟仿真。供应链的模拟也一样。市场竞争和人口动态学接触较少。</p>
 <p><img alt="sim" src="assets/sim.png" /></p>
@@ -1782,9 +1789,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="mpm">MPM简介</h3>
-<p>原理：建设中...</p>
-<p>应用：不同材料的仿真，例如水、奶酪、米等等</p>
+<h3 id="dem">DEM简述</h3>
+<p>原理：DEM方法对每一个颗粒的运动进行跟踪，通过硬球模型或软球模型（通常用软球模型）来计算粒子间的碰撞过程，也考虑粒子旋转</p>
+<p>应用：可以处理颗粒形状、扭曲、粘连，？</p>
+<h3 id="mpm">MPM简述</h3>
+<p>原理：物质点法将需要仿真的材料离散成粒子质点，用网格收集粒子的物理量、对物理量做处理（计算、求导等），再将物理量返回到粒子身上</p>
+<p>应用：适合模拟涉及材料特大变形和断裂破碎，例如奶酪的切割，沙子的搅拌等</p>
 <p>常见方法：</p>
 <ul>
 <li>
@@ -1804,7 +1814,8 @@
 </ul>
 </li>
 </ul>
-<h3 id="sph">SPH简介</h3>
+<p>精度：？</p>
+<h3 id="sph">SPH简述</h3>
 <p>原理：SPH中颗粒并不会发生直接相互作用，而是通过<strong>核函数</strong>实现不同颗粒间的相互作用。</p>
 <p>应用：一般用于流体仿真，但是可以做固液耦合</p>
 <p>常见方法：</p>
