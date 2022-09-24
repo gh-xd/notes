@@ -86,6 +86,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://gh-xd.github.io/notes/math/linear-system/jacobi-iteration/</loc>
+         <lastmod>2022-09-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://gh-xd.github.io/notes/math/ode/ode-python/</loc>
          <lastmod>2022-09-24</lastmod>
          <changefreq>daily</changefreq>
