@@ -1,5 +1,5 @@
 site_name: 研究笔记
-site_url:
+site_url: 'https://gh-xd.github.io/notes/'
 docs_dir: 'docs/zh'
 
 nav:
