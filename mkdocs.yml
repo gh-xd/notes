@@ -12,6 +12,7 @@ nav:
     - 线性系统:
       - math/linear-system/index.md
       - 雅可比迭代: math/linear-system/jacobi-iteration.md
+      - 高斯-塞德尔迭代: math/linear-system/gauss-seidel-iteration.md
     - 欧拉公式: math/euler-eq.md
     - 张量: math/tensor.md
     - 偏微分方程:

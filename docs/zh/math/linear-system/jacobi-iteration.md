@@ -1,8 +1,8 @@
-# 雅可比迭代
+# 雅可比迭代法
 
+## 目标
 
-
-
+- 理解雅可比迭代f法的过程
 
 ## 1. 直接使用A矩阵求解
 
@@ -14,7 +14,7 @@ $a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1$
 
 同理，$Ax=b$通过移向可以表示成如下形式：
 
-$\left\{\begin{aligned}x_1=&\displaystyle\frac{1}{a_{11}}(b_1-a_{12}x_2-\cdots -a_{1n}x_n)\\x_2=&\displaystyle\frac{1}{a_{22}}(b_2-a_{21}x_2-\cdots -a_{2n}x_n)\\&\vdots\\x_n=&\displaystyle\frac{1}{a_{nn}}(b_n-a_{n1}x_2-\cdots -a_{n,n-1}x_{n-1})\end{aligned}\right.$
+$\left\{\begin{aligned}x_1=&\displaystyle\frac{1}{a_{11}}(b_1-a_{12}x_2-\cdots -a_{1n}x_n)\\x_2=&\displaystyle\frac{1}{a_{22}}(b_2-a_{21}x_1-\cdots -a_{2n}x_n)\\&\vdots\\x_n=&\displaystyle\frac{1}{a_{nn}}(b_n-a_{n1}x_2-\cdots -a_{n,n-1}x_{n-1})\end{aligned}\right.$
 
 ### 1.2 迭代过程
 
@@ -28,7 +28,7 @@ $\left\{\begin{aligned}x_1^{(1)}=&\displaystyle\frac{1}{a_{11}}(b_1-a_{12}x_2^{(
 
 同理，迭代k次以后，可以得到$x^{(k+1)}$
 
-$\left\{\begin{aligned}x_1^{(k+1)}=&\displaystyle\frac{1}{a_{11}}(b_1-a_{12}x_2^{(k)}-\cdots -a_{1n}x_n^{(k)})\\x_2^{(k+1)}=&\displaystyle\frac{1}{a_{22}}(b_2-a_{21}x_2^{(k)}-\cdots -a_{2n}x_n^{(k)})\\&\vdots\\x_n^{(k+1)}=&\displaystyle\frac{k+1}{a_{nn}}(b_n-a_{n1}x_2^{(k)}-\cdots -a_{n,n-1}x_{n-1}^{(k)})\end{aligned}\right.$
+$\left\{\begin{aligned}x_1^{(k+1)}=&\displaystyle\frac{1}{a_{11}}(b_1-a_{12}x_2^{(k)}-\cdots -a_{1n}x_n^{(k)})\\x_2^{(k+1)}=&\displaystyle\frac{1}{a_{22}}(b_2-a_{21}x_1^{(k)}-\cdots -a_{2n}x_n^{(k)})\\&\vdots\\x_n^{(k+1)}=&\displaystyle\frac{k+1}{a_{nn}}(b_n-a_{n1}x_2^{(k)}-\cdots -a_{n,n-1}x_{n-1}^{(k)})\end{aligned}\right.$
 
 ### 1.3 迭代公式
 
