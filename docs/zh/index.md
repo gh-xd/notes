@@ -1,12 +1,14 @@
-# Welcome to MkDocs
+# 研究笔记
 
-:material-calendar-edit: 研究工作之外好玩技术与知识
+---
 
-:material-math-cos: 记录技术实现需要的数学知识
+:material-calendar-edit: 有趣技术知识的理解
 
-:octicons-file-code-24: 解读部分技术的关键代码实现
+:material-math-cos: 技术实现的数学知识
 
-:octicons-book-24: 后续读书和论文的笔记
+:octicons-file-code-24: 部分关键代码的实现
+
+:octicons-book-24: 读书和论文的笔记
 
 :octicons-share-android-16: 知识分享
 

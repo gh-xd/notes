@@ -65,3 +65,15 @@ cmake ..
 make
 ```
 
+
+
+## 4. 构建类型
+
+CMake有四种构建类型：
+
+- Debug：不对代码进行优化，保留所有符号数据库以便于调试。
+- Release：对代码进行优化。
+- RelWithDebInfo：与Release相同，但是会保留符号数据库。
+- MinSizeRel：与Release相同，但是会要求产生最小的二进制文件。
+
+暂时可以先使用cmake默认的Debug和Release

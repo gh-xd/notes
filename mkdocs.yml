@@ -3,7 +3,9 @@ site_url: 'https://gh-xd.github.io/notes/'
 docs_dir: 'docs/zh'
 
 nav:
-  - 网站介绍: index.md
+  - 介绍:
+    - 网站介绍: index.md
+    - 关于: about.md
   - 数学:
     - 微分算子: math/diff-operators.md
     - 常微分方程:
@@ -20,32 +22,32 @@ nav:
       - 偏微分方程求解: math/pde/pde.md
     - 伽辽金法: math/galerkin.md
     - 距离度量: math/distances.md
+  - 模拟仿真:
+    - simulation/index.md
+    - 离散事件模拟仿真:
+      - simulation/des/index.md
+    - 有限元仿真:
+      - simulation/fem/index.md
+    - 流体仿真:
+      - 基础概念: simulation/cfd.md
+    - 离散元:
+      - simulation/dem/index.md
+    - 图形学物理仿真:
+      - simulation/graphics/index.md
+      - 弹簧质点系统: simulation/graphics/mss.md
+      - 线性有限元: simulation/graphics/lfem.md
+      - 光滑粒子流体动力: simulation/graphics/sph.md
+      - 物质点法: simulation/graphics/mpm.md
+    - 有限状态机:
+      - 概念: simulation/fsm/concept.md
+  - 编程:
+    - 设计模式简明版: programming/design-pattern.md
+    - Python和C++混合编程: programming/python-cpp.md
   - 算法:
     - algorithm/index.md
     - 复杂度: algorithm/complexity.md
     - 动态规划:
       - algorithm/dynamic-planning/index.md
-  - 语言:
-    - Python:
-      - languages/python/index.md
-    - C++:
-      - languages/c++/index.md
-    - Rust:
-      - languages/rust/index.md
-  - 模拟仿真:
-    - simulation/index.md
-    - 图形学仿真:
-      - 弹簧质点系统: simulation/graphics/mss.md
-      - 线性有限元: simulation/graphics/lfem.md
-      - 物质点法: simulation/graphics/mpm.md
-    - 离散事件模拟仿真:
-      - simulation/des/index.md
-    - 有限元仿真:
-      - simulation/fem/index.md
-    - 离散元:
-      - simulation/dem/index.md
-    - 有限状态机:
-      - 概念: simulation/fsm/concept.md
   - 技术概念:
     - CI/CD: tech-concepts/cicd.md
     - MLOps:
