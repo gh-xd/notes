@@ -38,6 +38,9 @@ nav:
       - 线性有限元: simulation/graphics/lfem.md
       - 光滑粒子流体动力: simulation/graphics/sph.md
       - 物质点法: simulation/graphics/mpm.md
+    - 系统动态:
+      - simulation/sd/index.md
+      - 键合图: simulation/sd/bond-graph.md
     - 有限状态机:
       - 概念: simulation/fsm/concept.md
   - 编程:

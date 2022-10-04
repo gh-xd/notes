@@ -14,7 +14,7 @@ $grad\ s=\nabla s = \left[\displaystyle\frac{\partial s}{\partial x}, \displayst
 
 例如一个速度，速度梯度？
 
-### 2. 散度
+## 2. 散度
 
 Divergence $\nabla\cdot:\mathbb{R}^3\rightarrow \mathbb{R}^1$  
 
