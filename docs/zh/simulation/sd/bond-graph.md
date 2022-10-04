@@ -21,8 +21,6 @@ $P(t)=\displaystyle\frac{\varepsilon (t)}{dt}\quad or\quad \varepsilon(t)=\int P
 
 $d\varepsilon=Pdt=\delta W+\delta Q$
 
-
-
 **概念区分**
 
 Kinetics(physics & engineering)强调运动和导致运动原因之间的关系。尤其是，力与力矩（forces and torques）。在物理学课本（理论界）中，analytical dynamic已经取代了kinetics，但是在工程领域，还是经常能看到kinetics这个单词。
@@ -31,7 +29,15 @@ Dynamic强调“力“， 要追究运动背后的driving force，即研究运�
 
 Kinematics强调”运动“，是经典力学的一个分支，在研究的过程中不考虑是什么原因（也就是不考虑力）导致了运动。运动学研究的过程就是测量和计算运动量（kinematic quantities）并用来描述运动的过程。运动量包括：速度，加速度，位移，时间，和轨迹。
 
+## 图的区别
 
+键合图是物理动态系统的一个图形表示，它可以将系统转换到一个状态空间表达。它和块图（block diagram）/信号流图（signal-flow graph）很相似，但主要的区别在于键合图中的弧线表示物理能量的双向交换，块图和信号流图则只表达单向的信息流。
+
+## 因果性
+
+根据参考资料**[Bond Graph]**，键合图的一大特征就是因果性。在建模时需要在端口（ports）间指定其因果性（信息流方向）。
+
+所以键合图到底可不可以做非因果建模？
 
 ## 多物理系统
 
@@ -239,3 +245,4 @@ $Energy=\displaystyle\frac{q^2}{2c}$，$q$为广义的位移变化
 ## 学习资料
 
 - [3 Bond Graph Modelling Method](https://pressbooks.bccampus.ca/engineeringsystems/chapter/bond-graph-modelling-method/)
+- [Bond Graph](https://handwiki.org/wiki/Bond_graph)
