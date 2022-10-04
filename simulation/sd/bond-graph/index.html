@@ -1182,13 +1182,27 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    多物理系统
+    图的区别
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    因果性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    多物理系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     九个基本元素
   </a>
   
@@ -1243,7 +1257,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     系统状态变量
   </a>
   
@@ -1270,7 +1284,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     学习资料
   </a>
   
@@ -1887,13 +1901,27 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    多物理系统
+    图的区别
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    因果性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    多物理系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     九个基本元素
   </a>
   
@@ -1948,7 +1976,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     系统状态变量
   </a>
   
@@ -1975,7 +2003,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     学习资料
   </a>
   
@@ -2016,7 +2044,12 @@
 <p>Kinetics(physics &amp; engineering)强调运动和导致运动原因之间的关系。尤其是，力与力矩（forces and torques）。在物理学课本（理论界）中，analytical dynamic已经取代了kinetics，但是在工程领域，还是经常能看到kinetics这个单词。</p>
 <p>Dynamic强调“力“， 要追究运动背后的driving force，即研究运动与“力”的关系，基本所有dynamic的方程的出发点都是牛顿定律，如F=ma，等式的一边是力F，另一边是运动速度v或加速度a，可以把dynamic看成牛顿定律的推广。研究动力学问题必须知道系统的拉格朗日量或者哈密顿量。一些对时间的微分方程我们也经常称之为dynamic system(动力系统)。</p>
 <p>Kinematics强调”运动“，是经典力学的一个分支，在研究的过程中不考虑是什么原因（也就是不考虑力）导致了运动。运动学研究的过程就是测量和计算运动量（kinematic quantities）并用来描述运动的过程。运动量包括：速度，加速度，位移，时间，和轨迹。</p>
-<h2 id="_4">多物理系统</h2>
+<h2 id="_4">图的区别</h2>
+<p>键合图是物理动态系统的一个图形表示，它可以将系统转换到一个状态空间表达。它和块图（block diagram）/信号流图（signal-flow graph）很相似，但主要的区别在于键合图中的弧线表示物理能量的双向交换，块图和信号流图则只表达单向的信息流。</p>
+<h2 id="_5">因果性</h2>
+<p>根据参考资料<strong>[Bond Graph]</strong>，键合图的一大特征就是因果性。在建模时需要在端口（ports）间指定其因果性（信息流方向）。</p>
+<p>所以键合图到底可不可以做非因果建模？</p>
+<h2 id="_6">多物理系统</h2>
 <p>BG建模方法中与不同系统相关的模拟量和单位：</p>
 <table>
 <thead>
@@ -2087,7 +2120,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_5">九个基本元素</h2>
+<h2 id="_7">九个基本元素</h2>
 <p>构建一个物理系统的BG模型需要考虑系统中的能量保存、传输和转换。</p>
 <ul>
 <li>
@@ -2181,7 +2214,7 @@
 <p>同上，如果<span class="arithmatex">\(f_1\)</span>作为输入，<span class="arithmatex">\(f_2\)</span>作为输出，则<span class="arithmatex">\(f_2=\kappa f_1\)</span></p>
 <p>同理，如果<span class="arithmatex">\(e_1\)</span>作为输入，<span class="arithmatex">\(e_2\)</span>作为输出，可以写成<span class="arithmatex">\(f_1=\kappa^{-1}f_2\)</span></p>
 <p><img alt="gy-element" src="../assets/gy-element.jpeg" /></p>
-<h2 id="_6">系统状态变量</h2>
+<h2 id="_8">系统状态变量</h2>
 <p>BG模型的最终目的是求解系统方程，系统方程可能是二阶或者二阶以上的ODE。然而，当我们针对状态变量（state variables）来写方程时，我们会得到一个一阶ODE。状态变量唯一地、充分地对系统动态进行了描述。</p>
 <p>当我们从BG模型抽取系统方程时，也会涉及额外的代数方程。所以，我们会得到一个系统的微分代数方程（DAE），好处是ODE为一阶。</p>
 <h3 id="i">惯性元素I状态变量</h3>
@@ -2207,9 +2240,10 @@
 <li>根据物理规则计算输出，图中为胡克定律，计算得到输出速度为<span class="arithmatex">\(e=\displaystyle\frac{q}{c}\)</span></li>
 </ol>
 <p><img alt="xx" src="../assets/c-element-sv.jpeg" /></p>
-<h2 id="_7">学习资料</h2>
+<h2 id="_9">学习资料</h2>
 <ul>
 <li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/bond-graph-modelling-method/">3 Bond Graph Modelling Method</a></li>
+<li><a href="https://handwiki.org/wiki/Bond_graph">Bond Graph</a></li>
 </ul>
 
 
