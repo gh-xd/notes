@@ -1946,17 +1946,10 @@ $$
 在构建求解器时，<strong>求解的对象是<span class="arithmatex">\(u(t)\)</span>，即一个关于<span class="arithmatex">\(t\)</span>的函数</strong>。</p>
 <p>但是，函数无法用代码来表示。于是，可以理解为求解得到的具体形式为一个数组。</p>
 <p>例如，假设<span class="arithmatex">\(t\)</span>的形式为<span class="arithmatex">\((0,1,2,...,n-1)\)</span>一共n个的离散的时间点，那么，求解出来对应的<span class="arithmatex">\(u(t)\)</span>的形式也是一个n维的数组，其形式为<span class="arithmatex">\((5.3, 5.4, 5.5,...8.3)\)</span>。从可视化的角度来看，<strong>这两个数组共同构成了一个二维坐标的x轴和y轴</strong>，也就可以用这条离散的曲线来表达求解的对象<span class="arithmatex">\(u(t\)</span>)。</p>
-<p>对于二阶，可以写成：
-$$
-y<sup _="'">{''}=f(x,y,y</sup>), \quad y(x_0)=y_0, \quad y^{'}(x_0)=u_0
-$$
-用中间变量来表示：
-$$
-\begin{cases}
-u=y^{'}, \quad u(x_0)=u_0\
-u^{'}=f(x,y,u), \quad y(x_0)=y_0
-\end{cases}
-$$</p>
+<p>对于二阶，可以写成：</p>
+<p><span class="arithmatex">\(y^{''}=f(x,y,y^{'}), \quad y(x_0)=y_0, \quad y^{'}(x_0)=u_0\)</span></p>
+<p>用中间变量来表示：</p>
+<p><span class="arithmatex">\(\begin{cases}u=y^{'}, \quad u(x_0)=u_0\\u^{'}=f(x,y,u), \quad y(x_0)=y_0\end{cases}\)</span></p>
 <h3 id="2">2. 数值方法</h3>
 <ul>
 <li>显式，欧拉前向 Forward euler method</li>

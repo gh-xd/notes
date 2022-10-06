@@ -1331,10 +1331,30 @@
     显式求解
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="显式求解">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    非迭代求解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    迭代求解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     隐式求解
   </a>
   
@@ -1346,7 +1366,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     学习资料
   </a>
   
@@ -2096,10 +2116,30 @@
     显式求解
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="显式求解">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    非迭代求解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    迭代求解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     隐式求解
   </a>
   
@@ -2111,7 +2151,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     学习资料
   </a>
   
@@ -2361,18 +2401,35 @@
 <h4 id="b33">B3.3 系统方程组</h4>
 <p>通过3.1-组件到系统和3.2-系统到组件，一共得到3个方程：</p>
 <p><span class="arithmatex">\(\begin{bmatrix}\dot p_2\\\dot q_4\\\dot p_5\end{bmatrix}=\begin{bmatrix}&amp;-(\displaystyle\frac{R_1}{L_2}+\frac{R_2}{L_2})&amp;0&amp;-\displaystyle\frac{R_1}{L_1}&amp;\\&amp;0&amp;0&amp;\displaystyle\frac{1}{L_1}&amp;\\&amp;-\displaystyle\frac{R_1}{L_2}&amp;-\displaystyle\frac{1}{c}&amp;-\displaystyle\frac{R_1}{L_1}\end{bmatrix}\begin{bmatrix}p_2\\q_4\\p_5\end{bmatrix}+\begin{bmatrix}V\\0\\V\end{bmatrix}\)</span></p>
+<p>以上系统方程组的形式为：</p>
+<p><span class="arithmatex">\(\dot x=Ax+b\)</span>，其中<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(b\)</span>已知，需要求<span class="arithmatex">\(x\)</span></p>
 <h2 id="_3">求解系统方程</h2>
 <h3 id="_4">显式求解</h3>
-<p>例如案例A和案例B</p>
-<p>这里应该只能用迭代法？还是有别的办法求解？</p>
+<p>例如案例A和案例B都是线性方程组，每一个方程都是一个ODE方程。</p>
+<p>所以，要求解的是一个系统一阶微分方程组（system of ode equations），<span class="arithmatex">\(n\)</span>为方程的个数。</p>
+<h4 id="_5">非迭代求解</h4>
+<p>和求一个ODE一样，对系统方程组<span class="arithmatex">\(\dot x_i=\displaystyle\frac{dx_i}{dt}=A_ix_i+b_i,\ i=1,2,...,n\)</span>：</p>
+<p>可以使用<a href="https://gh-xd.github.io/notes-zh/math/ode/ode/#11">前向欧拉方法</a>，选取一个步长<span class="arithmatex">\(h\)</span>，<span class="arithmatex">\(k\)</span>是迭代的次数，则有：</p>
+<p><span class="arithmatex">\(x_{i}^{k+1}=x_i^k+h(A_ix_i^k+b_i),\ i=1,2,...,n\)</span></p>
+<p>也可以使用<a href="https://gh-xd.github.io/notes-zh/math/ode/ode/#13-rk4">RK4法</a>，选取一个步长<span class="arithmatex">\(h\)</span>，则有：</p>
+<p><span class="arithmatex">\(x_i^{k+1}=x_i^k + \displaystyle\frac{h}{6}(k_1 + 2k_2 + 2k_3 + k4)\)</span>，其中：</p>
+<p><span class="arithmatex">\(\begin{cases}
+k_1 = A_ix_i^k+b_i
+\\k_2=A_i(x_i^k+h\displaystyle\frac{k_1}{2})+b_i
+\\
+k_3=A_i(x_i^k+h\displaystyle\frac{k_2}{2})+b_i
+\\
+k_4=A_i(x_i^k+hk_3)+b_i
+\end{cases}\)</span></p>
+<p>非迭代求解，则每个方程第<span class="arithmatex">\(k\)</span>步求出的结果，不会给到其他方程使用。好处是可以并行。</p>
+<h4 id="_6">迭代求解</h4>
+<p>迭代求解，则每个方程第<span class="arithmatex">\(k\)</span>步求出的结果，会给到其他方程进行使用。</p>
+<p>但是因为案例A和案例B中的方程顺序，并不是解线性系统<span class="arithmatex">\(Ax=b\)</span>中的<span class="arithmatex">\(x_i\)</span>都是按顺序从上到下排列的，暂时还不知道咋弄。</p>
+<h3 id="_7">隐式求解</h3>
 <blockquote>
 <p>建设中...</p>
 </blockquote>
-<h3 id="_5">隐式求解</h3>
-<blockquote>
-<p>建设中...</p>
-</blockquote>
-<h2 id="_6">学习资料</h2>
+<h2 id="_8">学习资料</h2>
 <ul>
 <li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/miscellaneous-topics/#chapter-76-section-4">11.4 Extracting System Equations from BG Models</a></li>
 <li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/bond-graph-models-for-electrical-systems/#F7-8">7 Bond Graph Models for Electrical Systems</a></li>
