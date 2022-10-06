@@ -156,6 +156,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://gh-xd.github.io/notes/simulation/ds/</loc>
+         <lastmod>2022-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://gh-xd.github.io/notes/simulation/ds/bond-graph-modeling-solve/</loc>
+         <lastmod>2022-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://gh-xd.github.io/notes/simulation/ds/bond-graph/</loc>
+         <lastmod>2022-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://gh-xd.github.io/notes/simulation/fem/</loc>
          <lastmod>2022-10-06</lastmod>
          <changefreq>daily</changefreq>
@@ -192,21 +207,6 @@
     </url>
     <url>
          <loc>https://gh-xd.github.io/notes/simulation/graphics/sph/</loc>
-         <lastmod>2022-10-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://gh-xd.github.io/notes/simulation/sd/</loc>
-         <lastmod>2022-10-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://gh-xd.github.io/notes/simulation/sd/bond-graph-modeling-solve/</loc>
-         <lastmod>2022-10-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://gh-xd.github.io/notes/simulation/sd/bond-graph/</loc>
          <lastmod>2022-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
