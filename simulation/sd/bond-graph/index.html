@@ -1105,6 +1105,8 @@
         
           
         
+          
+        
       
       
         
@@ -1285,6 +1287,13 @@
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    建模流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     学习资料
   </a>
   
@@ -1294,6 +1303,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bond-graph-modeling-solve/" class="md-nav__link">
+        键合图建模求解
+      </a>
     </li>
   
 
@@ -2004,6 +2027,13 @@
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    建模流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     学习资料
   </a>
   
@@ -2156,7 +2186,7 @@
 <p><img alt="i-element" src="../assets/i-element.jpeg" /></p>
 <p>根据牛顿定律，数学上的表达为：<span class="arithmatex">\(F=m\displaystyle\frac{dv}{dt}=m\dot v\)</span>，其中，<span class="arithmatex">\(F\)</span>是受到的力，<span class="arithmatex">\(v\)</span>是<span class="arithmatex">\(I\)</span>元素的速度。</p>
 <p>BG模型的记号为：<span class="arithmatex">\(e=I\displaystyle\frac{df}{dt}=I\dot f\)</span>，其中，输入为<span class="arithmatex">\(\displaystyle\frac{e}{I}\)</span>，输出为<span class="arithmatex">\(\dot f\)</span>，输入等于输出：<span class="arithmatex">\(\dot f=\displaystyle\frac{e}{I}\)</span>，公式是一阶ODE。</p>
-<p>对两边积分得到<span class="arithmatex">\(\displaystyle\int \dot fdt=\frac{1}{I}\int edt\)</span>，其中，力对时间的积分为动量<span class="arithmatex">\(\displaystyle\int edt=P\)</span></p>
+<p>对两边积分得到<span class="arithmatex">\(\displaystyle\int \dot fdt=\frac{1}{I}\int edt\)</span>，其中，力对时间的积分为冲量<span class="arithmatex">\(\displaystyle\int edt=P\)</span></p>
 <p>可以得到<span class="arithmatex">\(f=\displaystyle\frac{P}{I}\)</span></p>
 <p>根据上式，速度等于动量除以质量，虽然这一点很明确，但是在BG模型中，从物理的角度来理解更为重要：</p>
 <blockquote>
@@ -2196,12 +2226,10 @@
 <p><img alt="s-element" src="../assets/s-element.jpeg" /></p>
 <h3 id="1-0-">1- 和0-节点 - 分布约束元素</h3>
 <p>在BG模型中，系统中约束能量分布的两个元素<span class="arithmatex">\(1\)</span>和<span class="arithmatex">\(0\)</span>节点元素，它们有多个端口。</p>
-<p>下图是一个<span class="arithmatex">\(1-junction\)</span>元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件。</p>
-<p>1为强键，<span class="arithmatex">\(1-junction\)</span>元素分配来自强键的flow，它符合：</p>
+<p>下图是一个<span class="arithmatex">\(1-junction\)</span>元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件，只能通过强键接受一个流信号（flow signal），这个流信号为1，是强键，<span class="arithmatex">\(1-junction\)</span>元素分配来自强键的flow，它符合：</p>
 <p><span class="arithmatex">\(\left \{\begin{aligned}&amp;f_1=f_2=...=f_N\\&amp;\sum_{i=1}^Ne_i=0\end{aligned}\right.\)</span></p>
 <p><img alt="01-element1" src="../assets/01-element1.jpeg" /></p>
-<p>下图是一个<span class="arithmatex">\(0-junction\)</span>元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件。</p>
-<p>1为强键，<span class="arithmatex">\(0-junction\)</span>元素分配来自强键的effort，它符合：</p>
+<p>下图是一个<span class="arithmatex">\(0-junction\)</span>元素，它可以是一个势均衡器（effort equalizer），也可以是一个流收集器（flow summator）组件。只能通过强键接受一个势信号（effort signal）。这个势信号为1，是强键，<span class="arithmatex">\(0-junction\)</span>元素分配来自强键的effort，它符合：</p>
 <p><span class="arithmatex">\(\left \{\begin{aligned}&amp;e_1=e_2=...=e_N\\&amp;\sum_{i=1}^Nf_i=0\end{aligned}\right.\)</span></p>
 <p><img alt="01-element1" src="../assets/01-element2.jpeg" /></p>
 <h3 id="tfgy-">转换元素TF和转变元素GY - 能量转换元素</h3>
@@ -2218,14 +2246,14 @@
 <p>BG模型的最终目的是求解系统方程，系统方程可能是二阶或者二阶以上的ODE。然而，当我们针对状态变量（state variables）来写方程时，我们会得到一个一阶ODE。状态变量唯一地、充分地对系统动态进行了描述。</p>
 <p>当我们从BG模型抽取系统方程时，也会涉及额外的代数方程。所以，我们会得到一个系统的微分代数方程（DAE），好处是ODE为一阶。</p>
 <h3 id="i">惯性元素I状态变量</h3>
-<p>惯性元素<span class="arithmatex">\(I\)</span>的总能量可以写成元素的功率对时间的积分：<span class="arithmatex">\(\displaystyle\int f\cdot edt=\int(edt)f\)</span>，鉴于effort与时间的乘积为动量：<span class="arithmatex">\(edt=dp\)</span>，可以得到<span class="arithmatex">\(\displaystyle\int(edt)f=\int fdp\)</span>，也就是说，惯性元素的总能量是flow将动量<span class="arithmatex">\(p\)</span>作为状态变量的积分。</p>
+<p>惯性元素<span class="arithmatex">\(I\)</span>的总能量可以写成元素的功率对时间的积分：<span class="arithmatex">\(\displaystyle\int f\cdot edt=\int(edt)f\)</span>，鉴于effort与时间的乘积为冲量：<span class="arithmatex">\(edt=dp\)</span>，可以得到<span class="arithmatex">\(\displaystyle\int(edt)f=\int fdp\)</span>，也就是说，惯性元素的总能量是flow将动量<span class="arithmatex">\(p\)</span>作为状态变量的积分。</p>
 <p>根据牛顿第二定律，<span class="arithmatex">\(f=\displaystyle\frac{p}{I}\)</span>，那么总能量：</p>
 <p><span class="arithmatex">\(Energy=\displaystyle\frac{1}{I}\int pdp=\frac{p^2}{2I}\)</span></p>
 <p>上式表明，储存在惯性元素<span class="arithmatex">\(I\)</span>中的总能量，唯一地由其动量<span class="arithmatex">\(p\)</span>决定，即广义动量（generalized momentum）。</p>
 <p>如下图所示，求解的步骤为：</p>
 <ol>
 <li>确定BG模型中的<span class="arithmatex">\(I\)</span>元素输入和输出，图中输入为力（effort）</li>
-<li>计算状态变量，图中为计算<span class="arithmatex">\(I\)</span>元素的动量<span class="arithmatex">\(p\)</span></li>
+<li>计算状态变量，图中为计算<span class="arithmatex">\(I\)</span>元素的冲量<span class="arithmatex">\(p\)</span></li>
 <li>根据物理规则计算输出，图中为牛顿第二定理，计算得到输出速度为<span class="arithmatex">\(f=\displaystyle\frac{p}{m}\)</span></li>
 </ol>
 <p><img alt="zz" src="../assets/i-element-sv.jpeg" /></p>
@@ -2237,12 +2265,45 @@
 <ol>
 <li>确定BG模型中的<span class="arithmatex">\(C\)</span>元素输入和输出，图中输入为速度（flow）</li>
 <li>计算状态变量，图中为计算<span class="arithmatex">\(C\)</span>元素的位移<span class="arithmatex">\(q\)</span></li>
-<li>根据物理规则计算输出，图中为胡克定律，计算得到输出速度为<span class="arithmatex">\(e=\displaystyle\frac{q}{c}\)</span></li>
+<li>根据物理规则计算输出，图中为胡克定律，计算得到输出力为<span class="arithmatex">\(e=\displaystyle\frac{q}{c}\)</span></li>
 </ol>
 <p><img alt="xx" src="../assets/c-element-sv.jpeg" /></p>
-<h2 id="_9">学习资料</h2>
+<h2 id="_9">建模流程</h2>
+<p>构建一个包含机械、电气和液压系统的BG模型通常包含以下步骤：</p>
+<ol>
+<li>识别物理系统元件/类型（能量储存、源元素、耗散元件等）</li>
+<li>识别系统的自由度（DOF - degrees of freedom），该步骤虽然为可选，但是依然推荐</li>
+<li>识别并且列出需要的BG元素</li>
+<li>识别物理系统的物理点/节点<ul>
+<li>机械系统中的速度/力：平移的</li>
+<li>机械系统中的角速度/扭矩：旋转的</li>
+<li>电气系统中的电压/电流：电路</li>
+<li>液压系统中的压强/流量：流体网络</li>
+</ul>
+</li>
+<li>为步骤4中的条目指定合适的多端口节点（multi-port junction）元素<ul>
+<li>为速度、角速度、电流和液体流指定“1”</li>
+<li>为力、电压、压强指定“0”</li>
+</ul>
+</li>
+<li>使用BG元素和power bond连接相关元素到步骤5中的节点元素</li>
+<li>为步骤5中的条目指定合适的多端口节点元素<ul>
+<li>为相对速度和角速度指定“0”</li>
+<li>为电压降和压强降指定“1”</li>
+<li>为能量不变指定<span class="arithmatex">\(TF\)</span>和<span class="arithmatex">\(GY\)</span>元素</li>
+</ul>
+</li>
+<li>使用BG元素和强键连接相关元素到步骤7中的节点元素</li>
+<li>定义符号约定，并连接所有剩余的power bond</li>
+<li>应用所有的因果分配（积分因果为最高优先级）</li>
+<li>在20-sim中画出并构建BG模型</li>
+<li>使用包含的BG模型，执行仿真和设计</li>
+</ol>
+<p>具体建模的案例参见：</p>
+<h2 id="_10">学习资料</h2>
 <ul>
 <li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/bond-graph-modelling-method/">3 Bond Graph Modelling Method</a></li>
+<li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/building-bond-graph-models-general-procedure-and-application/">4 Building Bond Graph Models: General Procedure and Application</a></li>
 <li><a href="https://handwiki.org/wiki/Bond_graph">Bond Graph</a></li>
 </ul>
 
@@ -2286,13 +2347,13 @@
       
       
         
-        <a href="../../fsm/concept/" class="md-footer__link md-footer__link--next" aria-label="Next: 概念" rel="next">
+        <a href="../bond-graph-modeling-solve/" class="md-footer__link md-footer__link--next" aria-label="Next: 键合图建模求解" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              概念
+              键合图建模求解
             </div>
           </div>
           <div class="md-footer__button md-icon">
