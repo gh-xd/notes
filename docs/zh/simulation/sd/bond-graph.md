@@ -96,7 +96,7 @@ $I-Element$ 是一个被动元素，它接受一个输入，返回一个信号�
 
 BG模型的记号为：$e=I\displaystyle\frac{df}{dt}=I\dot f$，其中，输入为$\displaystyle\frac{e}{I}$，输出为$\dot f$，输入等于输出：$\dot f=\displaystyle\frac{e}{I}$，公式是一阶ODE。
 
-对两边积分得到$\displaystyle\int \dot fdt=\frac{1}{I}\int edt$，其中，力对时间的积分为动量$\displaystyle\int edt=P$
+对两边积分得到$\displaystyle\int \dot fdt=\frac{1}{I}\int edt$，其中，力对时间的积分为冲量$\displaystyle\int edt=P$
 
 可以得到$f=\displaystyle\frac{P}{I}$
 
@@ -164,17 +164,13 @@ $R$元素的本构方程：
 
 在BG模型中，系统中约束能量分布的两个元素$1$和$0$节点元素，它们有多个端口。
 
-下图是一个$1-junction$元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件。
-
-1为强键，$1-junction$元素分配来自强键的flow，它符合：
+下图是一个$1-junction$元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件，只能通过强键接受一个流信号（flow signal），这个流信号为1，是强键，$1-junction$元素分配来自强键的flow，它符合：
 
 $\left \{\begin{aligned}&f_1=f_2=...=f_N\\&\sum_{i=1}^Ne_i=0\end{aligned}\right.$
 
 ![01-element1](./assets/01-element1.jpeg)
 
-下图是一个$0-junction$元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件。
-
-1为强键，$0-junction$元素分配来自强键的effort，它符合：
+下图是一个$0-junction$元素，它可以是一个势均衡器（effort equalizer），也可以是一个流收集器（flow summator）组件。只能通过强键接受一个势信号（effort signal）。这个势信号为1，是强键，$0-junction$元素分配来自强键的effort，它符合：
 
 $\left \{\begin{aligned}&e_1=e_2=...=e_N\\&\sum_{i=1}^Nf_i=0\end{aligned}\right.$
 
@@ -210,7 +206,7 @@ BG模型的最终目的是求解系统方程，系统方程可能是二阶或者
 
 ### 惯性元素I状态变量
 
-惯性元素$I$的总能量可以写成元素的功率对时间的积分：$\displaystyle\int f\cdot edt=\int(edt)f$，鉴于effort与时间的乘积为动量：$edt=dp$，可以得到$\displaystyle\int(edt)f=\int fdp$，也就是说，惯性元素的总能量是flow将动量$p$作为状态变量的积分。
+惯性元素$I$的总能量可以写成元素的功率对时间的积分：$\displaystyle\int f\cdot edt=\int(edt)f$，鉴于effort与时间的乘积为冲量：$edt=dp$，可以得到$\displaystyle\int(edt)f=\int fdp$，也就是说，惯性元素的总能量是flow将动量$p$作为状态变量的积分。
 
 根据牛顿第二定律，$f=\displaystyle\frac{p}{I}$，那么总能量：
 
@@ -221,7 +217,7 @@ $Energy=\displaystyle\frac{1}{I}\int pdp=\frac{p^2}{2I}$
 如下图所示，求解的步骤为：
 
 1. 确定BG模型中的$I$元素输入和输出，图中输入为力（effort）
-2. 计算状态变量，图中为计算$I$元素的动量$p$
+2. 计算状态变量，图中为计算$I$元素的冲量$p$
 3. 根据物理规则计算输出，图中为牛顿第二定理，计算得到输出速度为$f=\displaystyle\frac{p}{m}$
 
 ![zz](./assets/i-element-sv.jpeg)
@@ -238,11 +234,40 @@ $Energy=\displaystyle\frac{q^2}{2c}$，$q$为广义的位移变化
 
 1. 确定BG模型中的$C$元素输入和输出，图中输入为速度（flow）
 2. 计算状态变量，图中为计算$C$元素的位移$q$
-3. 根据物理规则计算输出，图中为胡克定律，计算得到输出速度为$e=\displaystyle\frac{q}{c}$
+3. 根据物理规则计算输出，图中为胡克定律，计算得到输出力为$e=\displaystyle\frac{q}{c}$
 
 ![xx](./assets/c-element-sv.jpeg)
+
+## 建模流程
+
+构建一个包含机械、电气和液压系统的BG模型通常包含以下步骤：
+
+1. 识别物理系统元件/类型（能量储存、源元素、耗散元件等）
+2. 识别系统的自由度（DOF - degrees of freedom），该步骤虽然为可选，但是依然推荐
+3. 识别并且列出需要的BG元素
+4. 识别物理系统的物理点/节点
+   - 机械系统中的速度/力：平移的
+   - 机械系统中的角速度/扭矩：旋转的
+   - 电气系统中的电压/电流：电路
+   - 液压系统中的压强/流量：流体网络
+5. 为步骤4中的条目指定合适的多端口节点（multi-port junction）元素
+   - 为速度、角速度、电流和液体流指定“1”
+   - 为力、电压、压强指定“0”
+6. 使用BG元素和power bond连接相关元素到步骤5中的节点元素
+7. 为步骤5中的条目指定合适的多端口节点元素
+   - 为相对速度和角速度指定“0”
+   - 为电压降和压强降指定“1”
+   - 为能量不变指定$TF$和$GY$元素
+8. 使用BG元素和强键连接相关元素到步骤7中的节点元素
+9. 定义符号约定，并连接所有剩余的power bond
+10. 应用所有的因果分配（积分因果为最高优先级）
+11. 在20-sim中画出并构建BG模型
+12. 使用包含的BG模型，执行仿真和设计
+
+具体建模的案例参见：
 
 ## 学习资料
 
 - [3 Bond Graph Modelling Method](https://pressbooks.bccampus.ca/engineeringsystems/chapter/bond-graph-modelling-method/)
+- [4 Building Bond Graph Models: General Procedure and Application](https://pressbooks.bccampus.ca/engineeringsystems/chapter/building-bond-graph-models-general-procedure-and-application/)
 - [Bond Graph](https://handwiki.org/wiki/Bond_graph)

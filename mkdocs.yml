@@ -41,6 +41,7 @@ nav:
     - 系统动态:
       - simulation/sd/index.md
       - 键合图: simulation/sd/bond-graph.md
+      - 键合图建模求解: simulation/sd/bond-graph-modeling-solve.md
     - 有限状态机:
       - 概念: simulation/fsm/concept.md
   - 编程:
