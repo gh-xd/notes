@@ -1651,6 +1651,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    已push的文件/文件夹
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     克隆（外人开发）
   </a>
@@ -2002,6 +2009,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    已push的文件/文件夹
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     克隆（外人开发）
   </a>
@@ -2126,6 +2140,12 @@
 <p><code>git push &lt;别名&gt; &lt;推送到哪个分支&gt;</code></p>
 <p>例如：<code>git push origin master</code></p>
 <p>如果远程仓库没有<code>master</code>分支，则会创建<code>master</code>分支</p>
+<h2 id="push">已push的文件/文件夹</h2>
+<p>如果已经在项目中提交了文件/文件夹，而后在<code>.gitignore</code>里面写进的话，是不会生效的。远程的文件/夹依然会被push。</p>
+<p>解决办法：指定文件夹，删除缓存，再add和push即可</p>
+<p><code>git rm --cached -r &lt;dir_name&gt;</code></p>
+<p><code>git add .</code></p>
+<p><code>git commit -m "update .gitignore"</code></p>
 <h2 id="_11">克隆（外人开发）</h2>
 <ol>
 <li>电脑中选择一个位置</li>

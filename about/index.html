@@ -396,9 +396,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         关于
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简要版
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    啰嗦版
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1745,6 +1783,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简要版
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    啰嗦版
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1758,13 +1818,20 @@
                   
 
 
-<h1 id="_1">关于</h1>
-<p>本硕专业是机械工程大类，毕业后去整车厂做项目管理。早年对编程接触很少。</p>
-<p>2019年之前只会一些VB编程，在EXCEL中实现简单的功能。</p>
-<p>2019年，为了完成论文中使用语音控制3D简单建模的demo，自学了Python。后在作为应用研究员，因研究需要学习了Tensorflow/Pytorch等机器学习相关工具，以及离散事件模拟仿真的simpy、解析工具xml-etree、图数据库Neo4j以及ontology、MBSE等工具和概念。</p>
-<p><strong>关于机器学习和深度学习</strong>：2021年研究过半年自然语言处理NLP。由于是应用研究，不涉及研究模型的优化、改造和创新，而是利用NLP技术制作demo来试验、验证和推广NLP技术的应用。此间，先后使用过一些开源方法和工具，例如nltk、Doc2Vec、FastText、TextCNN、BERT、OpenCV、BM25等等，用于构建文本/文件分类。之后研究了一小段时间Transformer的原理，转而使用对快速构建应用更加友好的开源工具Huggingface的transformers，并使用其中的一些预训练模型，例如Robeta、MarianMT、T5等，加上SpaCy构建了多语言识别、互翻译、语意近似的demo。为了直观展示demo，使用了科研快速构建demo工具streamlit。之后，因为兴趣，接触了一点较火的云原生概念，工作中也使用过谷歌云平台GCP，于是去挑战Kubernetes的学习，不方便实操而没有再继续。同时也在Coursera点了一门课MLOps，相应地也练习了先前了解到的概念，例如自动部署、自动扩容等等，但因为工作不需要，也就没有再继续深入学习。</p>
-<p><strong>关于MBSE和仿真</strong>：工作中有近两的时间都在跟一个大型项目，遵循MBSE来构建语义驱动的飞机组装线设计的tradeoff。虽然离散制造流程的建模、离散事件模拟仿真、3D模拟仿和数据可视化已经都不是新鲜事物，但项目前沿的核心思路是如何利用ontology，在使用元模型的情况下打通以上技术，以高效的研发模型复用取得一个更好的数字贯通性。当时已有合作伙伴使用MetaGraph建模和验证工具和自己开发的语言Karma，在此基础上进行开发验证。项目期间，先从使用离散事件模拟仿真库simpy构建仿真核心开始，研究和探索了如何使用Adjacency Matrix去表达组装线流程的拓扑结构，并行的、串行的，并进行整体包装，然后使用pandas实现了业务通用化。然后往业务上游，解析ontology中的xml树/Neo4j中的json数据，打造数据解析和预处理的模块；往业务下游，在sqlite中保存仿真结果，通过dashboard给到用户展示和交互功能。dashboard首先用streamlit，功能无法达到需求，进而学习了FastAPI、Vue和国外的一个Vuetify工具进行搭建。在网站中显示数据图表，先用纯Python的生态，plotly、dash等，但Vue搭配Echarts的组合更好。前后端数据传输则使用了axios的一些基本操作。此外，为了能跨环境快速运行demo，学了docker，由谷歌云平台GCP部署项目到云上可以公网访问。</p>
-<p>2022年，辞去德国的工作回国。由于航班不稳、疫情隔离和家庭事宜，期间一直没有找下一份工作。在空闲的时间里学习了Rust基础，起因是因为看到有人对比python和rust做离散事件仿真的速度，不止200倍的差别。期间也尝试学习了仿真的求解器，使用Rust做了一个简单的ODE方程组求解器。闲暇的几个月对模拟仿真产生很大的兴趣，接触了Taichi编程语言，高性能并行计算的编程语言，跟着课程边学边理解，如何做n-body system、mass-spring system的仿真，本质就是使用物理公式和显式欧拉进行数值求解。稍微复杂点的是用线性FEM，学做基于弹簧质点系统的块体仿真。更复杂的是流体力学CFD，NS方程的数学求解等。觉得很有意思的是MPM物质点法实现各种材料的耦合，也看了下SPH光滑粒子流体动力学的原理，理解了这两个方法的源代码。之前觉得不对，这时候才发现，学了一个月的理论和代码都是做图形学的，也就是舍弃掉一定的精确性去追求实时渲染的速度，不过也挺好玩的。由于自己是工科，于是转去看了看工业用的严肃的FEM，简单了解了Galerkin方法在做什么以后，暂时还没有再进一步。在此期间，也学了C++基础，CMake什么的，用sdl写了个简单的小球碰撞。写复杂的话，目前还不太好动手，先了解下设计模式再说。2022年自学的初心其实是做solver，完了回头一看，solver的可能性太多了，用在哪、干什么，求解器都不一样。回到工程上来，朋友提供了另一种思路了，听说了Modelica语言的建模和求解，了解到因果和非因果建模，专门花了点时间看bond graph怎么建模和如何提取DAE，有了前几个月的基础，虽然好懂了，但做起来没那么简单。往下再看看是不是能用C++做工程中的求解器，很大的一个题目。</p>
+<h1 id="_1">关于我</h1>
+<hr />
+<h2 id="_2">简要版</h2>
+<p>本硕专业是机械工程大类，2013年毕业后去整车厂做项目管理。早年对编程接触很少。</p>
+<p>2015年，去德国读工科领域、但非技术类的硕士。</p>
+<p>2019年，为了完成论文中语音控制3D简单建模的demo，自学了Python，发现编程是挺好玩的。</p>
+<p>2019年毕业后工作，应用研究员一名，研究人工智能在工程中的应用，也研究工程类的东西，本体、基于模型的系统工程、离散事件仿真等。</p>
+<p>2022年离职回国，学了些Rust和C++，了解到（不同的）仿真，想做求解器。</p>
+<hr />
+<h2 id="_3">啰嗦版</h2>
+<p><strong>关于机器学习和深度学习</strong>：2021年研究过半年自然语言处理NLP，学习了Tensorflow/Pytorch等机器学习相关工具。由于是应用研究，不涉及研究模型的优化、改造和创新，而是利用NLP技术制作demo来试验、验证和推广NLP技术的应用。此间，先后使用过一些开源方法和工具，例如nltk、Doc2Vec、FastText、TextCNN、BERT、OpenCV、BM25等等，用于构建文本/文件分类。之后研究了一小段时间Transformer的原理，转而使用对快速构建应用更加友好的开源工具Huggingface的transformers，并使用其中的一些预训练模型，例如Robeta、MarianMT、T5等，加上SpaCy构建了多语言识别、互翻译、语意近似的demo。为了直观展示demo，使用了科研快速构建demo工具streamlit。之后，因为兴趣，接触了一点较火的云原生概念，工作中也使用过谷歌云平台GCP，于是去挑战Kubernetes的学习，不方便实操而没有再继续。同时也在Coursera点了一门课MLOps，相应地也练习了先前了解到的概念，例如自动部署、自动扩容等等，但因为工作不需要，也就没有再继续深入学习。</p>
+<p><strong>关于MBSE和离散事件仿真</strong>：工作中有近两的时间都在跟一个大型项目，遵循MBSE来构建语义驱动的飞机组装线设计的tradeoff。虽然离散制造流程的建模、离散事件模拟仿真、3D模拟仿和数据可视化已经都不是新鲜事物，但项目前沿的核心思路是如何利用ontology，在使用元模型的情况下打通以上技术，以高效的研发模型复用取得一个更好的数字贯通性。当时已有合作伙伴使用MetaGraph建模和验证工具和自己开发的语言Karma，在此基础上进行开发验证。项目期间，先从使用离散事件模拟仿真库simpy构建仿真核心开始，研究和探索了如何使用Adjacency Matrix去表达组装线流程的拓扑结构，并行的、串行的，并进行整体包装，然后使用pandas实现了业务通用化。然后往业务上游，解析ontology中的xml树/Neo4j中的json数据，打造数据解析和预处理的模块；往业务下游，在sqlite中保存仿真结果，通过dashboard给到用户展示和交互功能。做dashboard首先用的streamlit，但功能无法达到需求，进而学习了FastAPI、Vue和国外的一个Vuetify工具进行搭建。在网站中显示数据图表，先用纯Python的生态，plotly、dash等，但Vue搭配Echarts的组合更好。前后端数据传输则使用了axios的一些基本操作。此外，为了能跨环境快速运行demo，学了docker，由谷歌云平台GCP部署项目到云上可以公网访问。</p>
+<p><strong>关于仿真和求解器</strong>：2022年，辞去德国的工作回国。由于航班不稳、疫情隔离和家庭事宜，期间一直没有找下一份工作。在空闲的时间里学习了Rust基础，起因看到有人对比python和rust做离散事件仿真的速度，不止200倍的差别被惊到了，这才知道编程语言之间那些差异。期间也尝试学习了仿真的求解器，使用Rust做了一个简单的ODE方程组求解器。闲暇的几个月对模拟仿真产生很大的兴趣，接触了Taichi编程语言，高性能并行计算的编程语言，跟着课程边学边理解，如何做n-body system、mass-spring system的仿真，本质就是使用物理公式和显式欧拉进行数值求解。稍微复杂点的是用线性FEM，学做基于弹簧质点系统的块体仿真。更复杂的是流体力学CFD，NS方程的数学求解等。觉得很有意思的是MPM物质点法实现各种材料的耦合，也看了下SPH光滑粒子流体动力学的原理，理解了这两个方法的源代码。这时候才发现，学了半天的理论和代码都是做图形学的，也就是舍弃掉一定的精确性去追求实时渲染的速度，达不到工业级仿真要求，不过也挺好玩的。由于自己是工科，于是转去看了看工业用的严肃的FEM，简单了解了Galerkin方法在做什么以后，暂时还没有再进一步。疫情严重居家时，又学了下C++基础，CMake什么的，用sdl写了个简单的小球碰撞，写复杂的项目，目前还不太好动手，先了解下设计模式再说。2022年自学的初心其实是做solver，完了回头一看，solver的可能性太多了，用在哪、干什么，求解器都不一样。回到工程上来，朋友提供了另一种思路了，听说了Modelica语言的建模和求解，了解到因果和非因果建模，专门花了点时间看bond graph怎么建模和如何提取DAE，有了前几个月的基础，懂起来快了，但做起来完全没那么简单。再看看是不是能用C++做工程中的求解器吧，虽然有轮子，但是自己做就很有趣。</p>
+<hr />
 
 
 
