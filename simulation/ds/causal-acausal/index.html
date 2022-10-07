@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://gh-xd.github.io/notes/simulation/ds/bond-graph/">
+        <link rel="canonical" href="https://gh-xd.github.io/notes/simulation/ds/causal-acausal/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
-        <title>键合图 - 研究笔记</title>
+        <title>因果和非因果建模 - 研究笔记</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              键合图
+              因果和非因果建模
             
           </span>
         </div>
@@ -1135,176 +1135,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          键合图
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bond-graph/" class="md-nav__link">
         键合图
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    目标
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    介绍
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    图的区别
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    因果性
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    多物理系统
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    九个基本元素
-  </a>
-  
-    <nav class="md-nav" aria-label="九个基本元素">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i-" class="md-nav__link">
-    惯性元素I - 动能储存
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c-" class="md-nav__link">
-    势能元素C - 势能储存元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#r-" class="md-nav__link">
-    摩擦元素R - 能量耗散元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sesf-" class="md-nav__link">
-    源元素Se/Sf - 边界输入元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-0-" class="md-nav__link">
-    1- 和0-节点 - 分布约束元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tfgy-" class="md-nav__link">
-    转换元素TF和转变元素GY - 能量转换元素
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    系统状态变量
-  </a>
-  
-    <nav class="md-nav" aria-label="系统状态变量">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    惯性元素I状态变量
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    势能元素C状态变量
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    建模流程
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    学习资料
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1328,11 +1163,168 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../causal-acausal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          因果和非因果建模
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         因果和非因果建模
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    词汇
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1 - 传统和面向对象方法
+  </a>
+  
+    <nav class="md-nav" aria-label="1 - 传统和面向对象方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-" class="md-nav__link">
+    1.1 - 传统建模方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 面向对象建模方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    2 - 非因果建模的任务
+  </a>
+  
+    <nav class="md-nav" aria-label="2 - 非因果建模的任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-" class="md-nav__link">
+    2.1 - 面向物理的连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    2.2 - 面向对象
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-" class="md-nav__link">
+    3 - 例子
+  </a>
+  
+    <nav class="md-nav" aria-label="3 - 例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-" class="md-nav__link">
+    3.1 - 数学模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-" class="md-nav__link">
+    3.2 - 控制模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-simulink" class="md-nav__link">
+    3.3 - 因果建模(Simulink)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-modelica" class="md-nav__link">
+    3.4 - 非因果建模(Modelica)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-" class="md-nav__link">
+    3.5 - 优缺点比较
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    学习资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1926,130 +1918,122 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    目标
+    词汇
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    介绍
+    目的
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1 - 传统和面向对象方法
+  </a>
+  
+    <nav class="md-nav" aria-label="1 - 传统和面向对象方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-" class="md-nav__link">
+    1.1 - 传统建模方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 面向对象建模方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    2 - 非因果建模的任务
+  </a>
+  
+    <nav class="md-nav" aria-label="2 - 非因果建模的任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-" class="md-nav__link">
+    2.1 - 面向物理的连接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    2.2 - 面向对象
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-" class="md-nav__link">
+    3 - 例子
+  </a>
+  
+    <nav class="md-nav" aria-label="3 - 例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-" class="md-nav__link">
+    3.1 - 数学模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-" class="md-nav__link">
+    3.2 - 控制模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-simulink" class="md-nav__link">
+    3.3 - 因果建模(Simulink)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-modelica" class="md-nav__link">
+    3.4 - 非因果建模(Modelica)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-" class="md-nav__link">
+    3.5 - 优缺点比较
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    图的区别
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    因果性
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    多物理系统
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    九个基本元素
-  </a>
-  
-    <nav class="md-nav" aria-label="九个基本元素">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i-" class="md-nav__link">
-    惯性元素I - 动能储存
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c-" class="md-nav__link">
-    势能元素C - 势能储存元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#r-" class="md-nav__link">
-    摩擦元素R - 能量耗散元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sesf-" class="md-nav__link">
-    源元素Se/Sf - 边界输入元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-0-" class="md-nav__link">
-    1- 和0-节点 - 分布约束元素
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tfgy-" class="md-nav__link">
-    转换元素TF和转变元素GY - 能量转换元素
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    系统状态变量
-  </a>
-  
-    <nav class="md-nav" aria-label="系统状态变量">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    惯性元素I状态变量
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    势能元素C状态变量
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    建模流程
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
     学习资料
   </a>
   
@@ -2070,257 +2054,90 @@
                   
 
 
-<h1 id="_1">键合图</h1>
-<h2 id="_2">目标</h2>
+<h1 id="_1">因果和非因果建模</h1>
+<h2 id="_2">词汇</h2>
+<p>因果建模 - causal modeling</p>
+<p>非因果建模 - acausal modeling</p>
+<h2 id="_3">目的</h2>
 <ul>
-<li>了解键合图是什么</li>
-<li>了解键合图的基本要素</li>
+<li>理解因果和非因果建模</li>
 </ul>
-<h2 id="_3">介绍</h2>
-<p>在工程系统中，当能量以一种形式向另一种形式转换时，所有的系统都共享一套在其组建间传输和分布能量的物理现象。根据热力学第一定律，系统的总能量保持不变。1959年，Henry Paynter使用了热力学第一定律和系统通用特性，创建了一种分析和建模多领域工程系统的通用的图方法，即键合图（BG）</p>
-<p>键合图通过图建模来表达一个系统。针对一个双向的能量/动力交换，键合图方法给每个系统组件指定端口（通信点），并通过键（通信路径和方向）来连接端口和邻接组件。每个组件接收/发送一个数量的effort（势），并且同时发送/接收另一个数量的flow（流）。势和流的乘积为功率，或者说是能量变化率。举例：在机械系统中，力是effort，速度是flow；在电气系统中，电压是effort，电流是flow。键的集合，包括相关的系统组件本构规则、约束和边界条件，组成了系统的BG模型。构建一个BG模型需要求9个基本元素，它们可以构建表达系统动态行为的BG模型。构建出的BG模型可以清楚地展示系统的运动学（flow的连续流）和动力学（effort的连续流），并且可以用来提取出描述系统动态行为的方程。</p>
+<h2 id="1-">1 - 传统和面向对象方法</h2>
+<p>2008年的文章说，因果建模和仿真的代表是Simulink，非因果的是Dymola和Modelica</p>
+<h3 id="11-">1.1 - 传统建模方法</h3>
+<p>写出公式，将拆分系统到块图（block diagram），表达因果，显式表达。</p>
+<p>没有面向对象（OO - object oriented），没有复用模型。</p>
+<p>将平衡公式写成微分代数系统方程组，手动转化为ODE方程组</p>
+<h3 id="12">1.2 面向对象建模方法</h3>
+<p>公式以中立形式，不考虑计算顺序 -&gt; 非因果建模。举个电阻的例子，真实情况下我们无法了解到电阻上究竟是电压产生电流还是电流产生电压，所以非因果是更加贴近自然表达的。因果性是人们为了方便而创造的一个概念。</p>
 <blockquote>
-<p>功率可以理解为单位时间内物体做功或能量变化的快慢</p>
+<p>公式以不考虑计算顺序的形式，即非因果模型</p>
 </blockquote>
-<p>系统的行为随着时间变化，所以BG模型中最关心的就是能量/功率的时间变化率。能量<span class="arithmatex">\(\varepsilon\)</span>和功率<span class="arithmatex">\(p\)</span> 的关系为：</p>
-<p><span class="arithmatex">\(P(t)=\displaystyle\frac{\varepsilon (t)}{dt}\quad or\quad \varepsilon(t)=\int P(tdt)\)</span></p>
-<p>根据热动力学，系统能量的总变化等于做的功 <span class="arithmatex">\(W\)</span> 和热量 <span class="arithmatex">\(Q\)</span> 的和：</p>
-<p><span class="arithmatex">\(d\varepsilon=Pdt=\delta W+\delta Q\)</span></p>
-<p><strong>概念区分</strong></p>
-<p>Kinetics(physics &amp; engineering)强调运动和导致运动原因之间的关系。尤其是，力与力矩（forces and torques）。在物理学课本（理论界）中，analytical dynamic已经取代了kinetics，但是在工程领域，还是经常能看到kinetics这个单词。</p>
-<p>Dynamic强调“力“， 要追究运动背后的driving force，即研究运动与“力”的关系，基本所有dynamic的方程的出发点都是牛顿定律，如F=ma，等式的一边是力F，另一边是运动速度v或加速度a，可以把dynamic看成牛顿定律的推广。研究动力学问题必须知道系统的拉格朗日量或者哈密顿量。一些对时间的微分方程我们也经常称之为dynamic system(动力系统)。</p>
-<p>Kinematics强调”运动“，是经典力学的一个分支，在研究的过程中不考虑是什么原因（也就是不考虑力）导致了运动。运动学研究的过程就是测量和计算运动量（kinematic quantities）并用来描述运动的过程。运动量包括：速度，加速度，位移，时间，和轨迹。</p>
-<h2 id="_4">图的区别</h2>
-<p>键合图是物理动态系统的一个图形表示，它可以将系统转换到一个状态空间表达。它和块图（block diagram）/信号流图（signal-flow graph）很相似，但主要的区别在于键合图中的弧线表示物理能量的双向交换，块图和信号流图则只表达单向的信息流。</p>
-<h2 id="_5">因果性</h2>
-<p>根据参考资料<strong>[Bond Graph]</strong>，键合图的一大特征就是因果性。在建模时需要在端口（ports）间指定其因果性（信息流方向）。</p>
-<p>所以键合图到底可不可以做非因果建模？</p>
-<h2 id="_6">多物理系统</h2>
-<p>BG建模方法中与不同系统相关的模拟量和单位：</p>
-<table>
-<thead>
-<tr>
-<th>Systems</th>
-<th>Effort (e)</th>
-<th>Flow (f)</th>
-<th>Displacement (<span class="arithmatex">\(q=\sum fdt\)</span>)</th>
-<th>Momentum (<span class="arithmatex">\(p=\int edt\)</span>)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>机械平移 mechanical-translational</td>
-<td>力 force [牛 <span class="arithmatex">\(N\)</span>]</td>
-<td>速度 velocity [<span class="arithmatex">\(m/s\)</span>]</td>
-<td>距离 distance [<span class="arithmatex">\(m\)</span>]</td>
-<td>动量 momentum [<span class="arithmatex">\(kg.m/s\)</span>]</td>
-</tr>
-<tr>
-<td>旋转机械 Rotational mechanical</td>
-<td>扭矩 torque [<span class="arithmatex">\(N.m\)</span>]</td>
-<td>角速度 angular velocity [<span class="arithmatex">\(rad/s\)</span>]</td>
-<td>角度 angle [<span class="arithmatex">\(rad\)</span>]</td>
-<td>角动量 angular momentum [<span class="arithmatex">\(kg.m^2/s\)</span>]</td>
-</tr>
-<tr>
-<td>液压 hydraulic</td>
-<td>压强 pressure [<span class="arithmatex">\(Pa\)</span>]</td>
-<td>体积流率 volume flow rate [<span class="arithmatex">\(m^3/s\)</span>]</td>
-<td>体积 volume [<span class="arithmatex">\(m^3\)</span>]</td>
-<td>液压动量 hydraulic momentum [<span class="arithmatex">\(Pa.s\)</span>]</td>
-</tr>
-<tr>
-<td>热学 thermal / 热力学 thermodynamics</td>
-<td>温度 temperature [<span class="arithmatex">\(K\)</span>]</td>
-<td>熵变化 entropy change [<span class="arithmatex">\(J/K.s\)</span>]</td>
-<td>熵 entropy [<span class="arithmatex">\(J/K\)</span>]</td>
-<td>-</td>
-</tr>
-<tr>
-<td>热流体 thermo-fluid</td>
-<td>焓 enthalpy (specific) [<span class="arithmatex">\(J\)</span>]</td>
-<td>质量流率 mass flow rate [<span class="arithmatex">\(kg/s\)</span>]</td>
-<td>质量流 mass flow [<span class="arithmatex">\(kg\)</span>]</td>
-<td>flow momentum</td>
-</tr>
-<tr>
-<td>电学 electrical</td>
-<td>电压 voltage [<span class="arithmatex">\(V\)</span>]</td>
-<td>电流 current [<span class="arithmatex">\(A\)</span>]</td>
-<td>电容 charge [<span class="arithmatex">\(C\)</span>]</td>
-<td>flux linkage [<span class="arithmatex">\(V.s\)</span>]</td>
-</tr>
-<tr>
-<td>电磁学 magnetics</td>
-<td>电磁力 magnetic force [<span class="arithmatex">\(A\)</span>]</td>
-<td>磁通量率 magnetic flux rate [<span class="arithmatex">\(Wb/s\)</span>]</td>
-<td>磁通量 magnetic flux [<span class="arithmatex">\(Wb\)</span>]</td>
-<td>-</td>
-</tr>
-<tr>
-<td>化学 chemical</td>
-<td>化学能 chemical potential [<span class="arithmatex">\(J/mol\)</span>]</td>
-<td>摩尔流率 mole flow rate [<span class="arithmatex">\(mol/s\)</span>]</td>
-<td>摩尔流量 mole flow [<span class="arithmatex">\(mol\)</span>]</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_7">九个基本元素</h2>
-<p>构建一个物理系统的BG模型需要考虑系统中的能量保存、传输和转换。</p>
+<h2 id="2-">2 - 非因果建模的任务</h2>
+<p>将所有模型方程（model equations）转换到一系列的：</p>
 <ul>
-<li>
-<p>对于能量储存，考虑两个元素：动力学中的惯性元素 <span class="arithmatex">\(I-Element\)</span> 和势能元素的 <span class="arithmatex">\(C-Element\)</span> 的能量储存。</p>
-</li>
-<li>
-<p>对于能量关于，考虑一个元素：摩擦或者电阻元素 <span class="arithmatex">\(R-Element\)</span> </p>
-</li>
-<li>
-<p>对于能量源汇，在系统的边界上由两个元素表示：势 <span class="arithmatex">\(S_e\)</span> 和流 <span class="arithmatex">\(S_f\)</span></p>
-</li>
-<li>
-<p>对于能量分布，管理系统中的能量分布定义两个元素作为结点，<span class="arithmatex">\(junction1\)</span> 和 <span class="arithmatex">\(junction0\)</span></p>
-</li>
-<li>
-<p>对于能量传输/转换，转换元素 <span class="arithmatex">\(TF-Element\)</span> (transformer)和回转元素 <span class="arithmatex">\(GY-Element\)</span>(Gyrator)</p>
-</li>
+<li>垂直排序的：从方程导出的变量</li>
+<li>水平排序的：所有右手边的变量已经由之前（行）的方程所运算过</li>
 </ul>
-<p>对于上述每一个BG元素，都有一个由数学模型表达的本构关系。</p>
-<p>例如一个线性机械弹簧由势能元素<span class="arithmatex">\(C\)</span>表达，它的方程需要遵循胡克定律。然而，一个弹簧的形变可以由受到一个effort引起，例如受到力；也可以由受到一个flow引起，例如速度。我们可以使用表达因果的图线（causality strokes）来表达因果分配（causality assignment）。需要对BG模型的每一个点都应用因果分配。</p>
-<p>一个例子：</p>
-<ul>
-<li>R-Element (damper)</li>
-<li>C-Element (spring)</li>
-<li>I-Element (mass)</li>
-<li>TF-Element (lever)</li>
-<li>GY-Element (gyroscope)</li>
-</ul>
-<h3 id="i-">惯性元素I - 动能储存</h3>
-<p><span class="arithmatex">\(I-Element\)</span> 是一个被动元素，它接受一个输入，返回一个信号。只有一个端口连接系统。</p>
-<p>机械系统中，质量体是一个<span class="arithmatex">\(I\)</span>元素；电气系统中，电感器是一个<span class="arithmatex">\(I\)</span>元素。</p>
-<p>下图中倾向于使用左侧的方式，即接受<span class="arithmatex">\(e\)</span>并积分，然后发送<span class="arithmatex">\(f\)</span>，effort-in，积分因果。</p>
-<p><img alt="i-element" src="../assets/i-element.jpeg" /></p>
-<p>根据牛顿定律，数学上的表达为：<span class="arithmatex">\(F=m\displaystyle\frac{dv}{dt}=m\dot v\)</span>，其中，<span class="arithmatex">\(F\)</span>是受到的力，<span class="arithmatex">\(v\)</span>是<span class="arithmatex">\(I\)</span>元素的速度。</p>
-<p>BG模型的记号为：<span class="arithmatex">\(e=I\displaystyle\frac{df}{dt}=I\dot f\)</span>，其中，输入为<span class="arithmatex">\(\displaystyle\frac{e}{I}\)</span>，输出为<span class="arithmatex">\(\dot f\)</span>，输入等于输出：<span class="arithmatex">\(\dot f=\displaystyle\frac{e}{I}\)</span>，公式是一阶ODE。</p>
-<p>对两边积分得到<span class="arithmatex">\(\displaystyle\int \dot fdt=\frac{1}{I}\int edt\)</span>，其中，力对时间的积分为冲量<span class="arithmatex">\(\displaystyle\int edt=P\)</span></p>
-<p>可以得到<span class="arithmatex">\(f=\displaystyle\frac{P}{I}\)</span></p>
-<p>根据上式，速度等于动量除以质量，虽然这一点很明确，但是在BG模型中，从物理的角度来理解更为重要：</p>
+<h3 id="21-">2.1 - 面向物理的连接</h3>
 <blockquote>
-<p>effort的积分收集了所有的输入数据</p>
+<p>建模工具会从子模型连接器的定义中生成合适的方程</p>
 </blockquote>
-<p>下图左边是块图的表达（block diagram），右边是BG的表达。</p>
-<p><img alt="i-element-block" src="../assets/i-element-block.jpeg" /></p>
-<p>总之，<span class="arithmatex">\(I\)</span>元素在BG模型中的本构方程为：</p>
-<p><span class="arithmatex">\(f=\displaystyle\frac{P}{I}=\frac{1}{I}\int edt\)</span></p>
-<p>其中，<span class="arithmatex">\(\displaystyle\int edt=P\)</span> 这一项叫做状态变量（state variable）</p>
-<h3 id="c-">势能元素C - 势能储存元素</h3>
-<p><span class="arithmatex">\(C-Element\)</span> 是一个被动元素，它接受一个输入，返回一个信号。只有一个端口连接系统。</p>
-<p>机械系统中，弹簧是一个<span class="arithmatex">\(C\)</span>元素；电气系统中，电容是一个<span class="arithmatex">\(C\)</span>元素。</p>
-<p>下图中倾向于使用右侧的方式，即接受<span class="arithmatex">\(f\)</span>，然后发送<span class="arithmatex">\(e\)</span>并积分，effort-out，积分因果。</p>
-<p><img alt="c-element" src="../assets/c-element.jpeg" /></p>
-<p>举一个弹簧的例子：<span class="arithmatex">\(F=kx=k\displaystyle\int vdt\)</span>，其中，<span class="arithmatex">\(k\)</span>是弹簧刚度。</p>
-<p>BG模型的记号为<span class="arithmatex">\(e=kq=\displaystyle\frac{q}{c}=\frac{1}{c}\int fdt,\ c=\frac{1}{k}\)</span></p>
-<p>其中，<span class="arithmatex">\(\displaystyle\int fdt\)</span> 为状态变量</p>
-<h3 id="r-">摩擦元素R - 能量耗散元素</h3>
-<p><span class="arithmatex">\(R-Element\)</span> 是一个被动元素，它接受一个输入，返回一个信号。只有一个端口连接系统。</p>
-<p>机械系统中，阻尼器是一个<span class="arithmatex">\(R\)</span>元素；电气系统中，电阻是一个<span class="arithmatex">\(R\)</span>元素。</p>
-<p>下图显示，<span class="arithmatex">\(R\)</span>元素的输入可以是effort，也可以是flow。</p>
-<p><img alt="r-element" src="../assets/r-element.jpeg" /></p>
-<p>举一个摩擦力的例子，<span class="arithmatex">\(F=Rv\)</span>，其中，<span class="arithmatex">\(R\)</span>为阻尼系数。</p>
-<p>BG模型的记号为：<span class="arithmatex">\(e=Rf\)</span></p>
-<p><span class="arithmatex">\(R\)</span>元素的本构方程：</p>
+<p>另一个区别于传统块图的特征是，非因果模型如何进行连接。子模型之间的连接是通过<strong>变量</strong>进行的。所有的系统，包括子系统都有两种类型的变量，被定义在子系统的连接器中（connector），这两种类型的变量和<a href="https://gh-xd.github.io/notes-zh/simulation/ds/bond-graph/#1-0-">键合图中的0-和1-节点</a>比较类似：</p>
 <ul>
-<li>
-<p>如果是effort-in，那么<span class="arithmatex">\(f=\displaystyle\frac{e}{R}\)</span></p>
-</li>
-<li>
-<p>如果是effort-out，那么<span class="arithmatex">\(e=Rf\)</span></p>
-</li>
+<li><strong>在连接点相同的变量</strong>：例如势能、温度、压强</li>
+<li><strong>在连接点求和为零的变量</strong>：例如电流、动能、力</li>
 </ul>
-<h3 id="sesf-">源元素Se/Sf - 边界输入元素</h3>
-<p>下图分别为effort-in和flow-in在BG模型中的符号表达</p>
-<p><img alt="s-element" src="../assets/s-element.jpeg" /></p>
-<h3 id="1-0-">1- 和0-节点 - 分布约束元素</h3>
-<p>在BG模型中，系统中约束能量分布的两个元素<span class="arithmatex">\(1\)</span>和<span class="arithmatex">\(0\)</span>节点元素，它们有多个端口。</p>
-<p>下图是一个<span class="arithmatex">\(1-junction\)</span>元素，它可以是一个流均衡器（flow equalizer），也可以是一个势收集器（effort summator）组件，只能通过强键接受一个流信号（flow signal），这个流信号为1，是强键，<span class="arithmatex">\(1-junction\)</span>元素分配来自强键的flow，它符合：</p>
-<p><span class="arithmatex">\(\left \{\begin{aligned}&amp;f_1=f_2=...=f_N\\&amp;\sum_{i=1}^Ne_i=0\end{aligned}\right.\)</span></p>
-<p><img alt="01-element1" src="../assets/01-element1.jpeg" /></p>
-<p>下图是一个<span class="arithmatex">\(0-junction\)</span>元素，它可以是一个势均衡器（effort equalizer），也可以是一个流收集器（flow summator）组件。只能通过强键接受一个势信号（effort signal）。这个势信号为1，是强键，<span class="arithmatex">\(0-junction\)</span>元素分配来自强键的effort，它符合：</p>
-<p><span class="arithmatex">\(\left \{\begin{aligned}&amp;e_1=e_2=...=e_N\\&amp;\sum_{i=1}^Nf_i=0\end{aligned}\right.\)</span></p>
-<p><img alt="01-element1" src="../assets/01-element2.jpeg" /></p>
-<h3 id="tfgy-">转换元素TF和转变元素GY - 能量转换元素</h3>
-<p>在物理工程系统中，能量可能由一些组件转换成另一种，但同时保持能量不变。它们有两个端口，输入端口输入一个量，输出端口输入转换后的量。机械系统中，杠杆和齿轮箱是转换元素<span class="arithmatex">\(TF\)</span>；电气系统中，变压器和发动机为转换元素<span class="arithmatex">\(TF\)</span>。</p>
-<p>转换元素<span class="arithmatex">\(TF\)</span>的输入和输出物理量类型相同，入下图，<span class="arithmatex">\(TF\)</span>接受一个effort和一个flow输入，输出一个转换后的effort和flow。当然，转换参数<span class="arithmatex">\(\lambda\)</span>需要事先定义好，</p>
-<p>如果<span class="arithmatex">\(f_1\)</span>作为输入，<span class="arithmatex">\(f_2\)</span>作为输出，可以写成<span class="arithmatex">\(f_2=\lambda f_1\)</span>。基于总能量不变，<span class="arithmatex">\(e_1f_1=e_2f_2\)</span>，输出的effort为：<span class="arithmatex">\(e_1=(f_2/f_1)e_2=\lambda e_2\)</span>。</p>
-<p>同理，如果<span class="arithmatex">\(e_1\)</span>作为输入，<span class="arithmatex">\(e_2\)</span>作为输出，可以写成<span class="arithmatex">\(f_1=\lambda^{-1}f_2\)</span></p>
-<p><img alt="tf-element" src="../assets/tf-element.jpeg" /></p>
-<p>转变元素<span class="arithmatex">\(GY\)</span>的输入是一类物理量，输出则是另一类物理量。</p>
-<p>同上，如果<span class="arithmatex">\(f_1\)</span>作为输入，<span class="arithmatex">\(f_2\)</span>作为输出，则<span class="arithmatex">\(f_2=\kappa f_1\)</span></p>
-<p>同理，如果<span class="arithmatex">\(e_1\)</span>作为输入，<span class="arithmatex">\(e_2\)</span>作为输出，可以写成<span class="arithmatex">\(f_1=\kappa^{-1}f_2\)</span></p>
-<p><img alt="gy-element" src="../assets/gy-element.jpeg" /></p>
-<h2 id="_8">系统状态变量</h2>
-<p>BG模型的最终目的是求解系统方程，系统方程可能是二阶或者二阶以上的ODE。然而，当我们针对状态变量（state variables）来写方程时，我们会得到一个一阶ODE。状态变量唯一地、充分地对系统动态进行了描述。</p>
-<p>当我们从BG模型抽取系统方程时，也会涉及额外的代数方程。所以，我们会得到一个系统的微分代数方程（DAE），好处是ODE为一阶。</p>
-<h3 id="i">惯性元素I状态变量</h3>
-<p>惯性元素<span class="arithmatex">\(I\)</span>的总能量可以写成元素的功率对时间的积分：<span class="arithmatex">\(\displaystyle\int f\cdot edt=\int(edt)f\)</span>，鉴于effort与时间的乘积为冲量：<span class="arithmatex">\(edt=dp\)</span>，可以得到<span class="arithmatex">\(\displaystyle\int(edt)f=\int fdp\)</span>，也就是说，惯性元素的总能量是flow将动量<span class="arithmatex">\(p\)</span>作为状态变量的积分。</p>
-<p>根据牛顿第二定律，<span class="arithmatex">\(f=\displaystyle\frac{p}{I}\)</span>，那么总能量：</p>
-<p><span class="arithmatex">\(Energy=\displaystyle\frac{1}{I}\int pdp=\frac{p^2}{2I}\)</span></p>
-<p>上式表明，储存在惯性元素<span class="arithmatex">\(I\)</span>中的总能量，唯一地由其动量<span class="arithmatex">\(p\)</span>决定，即广义动量（generalized momentum）。</p>
-<p>如下图所示，求解的步骤为：</p>
-<ol>
-<li>确定BG模型中的<span class="arithmatex">\(I\)</span>元素输入和输出，图中输入为力（effort）</li>
-<li>计算状态变量，图中为计算<span class="arithmatex">\(I\)</span>元素的冲量<span class="arithmatex">\(p\)</span></li>
-<li>根据物理规则计算输出，图中为牛顿第二定理，计算得到输出速度为<span class="arithmatex">\(f=\displaystyle\frac{p}{m}\)</span></li>
-</ol>
-<p><img alt="zz" src="../assets/i-element-sv.jpeg" /></p>
-<h3 id="c">势能元素C状态变量</h3>
-<p>和惯性元素一样计算，可以得到</p>
-<p><span class="arithmatex">\(Energy=\displaystyle\frac{q^2}{2c}\)</span>，<span class="arithmatex">\(q\)</span>为广义的位移变化</p>
-<p>上式表明，储存在势能元素<span class="arithmatex">\(C\)</span>中的总能量，唯一地由其位移<span class="arithmatex">\(q\)</span>决定，即广义位移（generalized displacement）</p>
-<p>如下图所示，求解的步骤为：</p>
-<ol>
-<li>确定BG模型中的<span class="arithmatex">\(C\)</span>元素输入和输出，图中输入为速度（flow）</li>
-<li>计算状态变量，图中为计算<span class="arithmatex">\(C\)</span>元素的位移<span class="arithmatex">\(q\)</span></li>
-<li>根据物理规则计算输出，图中为胡克定律，计算得到输出力为<span class="arithmatex">\(e=\displaystyle\frac{q}{c}\)</span></li>
-</ol>
-<p><img alt="xx" src="../assets/c-element-sv.jpeg" /></p>
-<h2 id="_9">建模流程</h2>
-<p>构建一个包含机械、电气和液压系统的BG模型通常包含以下步骤：</p>
-<ol>
-<li>识别物理系统元件/类型（能量储存、源元素、耗散元件等）</li>
-<li>识别系统的自由度（DOF - degrees of freedom），该步骤虽然为可选，但是依然推荐</li>
-<li>识别并且列出需要的BG元素</li>
-<li>识别物理系统的物理点/节点<ul>
-<li>机械系统中的速度/力：平移的</li>
-<li>机械系统中的角速度/扭矩：旋转的</li>
-<li>电气系统中的电压/电流：电路</li>
-<li>液压系统中的压强/流量：流体网络</li>
-</ul>
-</li>
-<li>为步骤4中的条目指定合适的多端口节点（multi-port junction）元素<ul>
-<li>为速度、角速度、电流和液体流指定“1”</li>
-<li>为力、电压、压强指定“0”</li>
-</ul>
-</li>
-<li>使用BG元素和power bond连接相关元素到步骤5中的节点元素</li>
-<li>为步骤5中的条目指定合适的多端口节点元素<ul>
-<li>为相对速度和角速度指定“0”</li>
-<li>为电压降和压强降指定“1”</li>
-<li>为能量不变指定<span class="arithmatex">\(TF\)</span>和<span class="arithmatex">\(GY\)</span>元素</li>
-</ul>
-</li>
-<li>使用BG元素和强键连接相关元素到步骤7中的节点元素</li>
-<li>定义符号约定，并连接所有剩余的power bond</li>
-<li>应用所有的因果分配（积分因果为最高优先级）</li>
-<li>在20-sim中画出并构建BG模型</li>
-<li>使用包含的BG模型，执行仿真和设计</li>
-</ol>
-<p>具体建模的案例参见<a href="https://gh-xd.github.io/notes-zh/simulation/ds/bond-graph-modeling-solve/#a-">机械系统案例</a>和<a href="https://gh-xd.github.io/notes-zh/simulation/ds/bond-graph-modeling-solve/#b-rlc">RLC电路案例</a></p>
-<h2 id="_10">学习资料</h2>
+<p>连接器结合，子模型就被连接起来。建模工具会从子模型连接器的定义中生成合适的方程。</p>
+<h3 id="22-">2.2 - 面向对象</h3>
+<blockquote>
+<p>模型类满足OO，并可以直接由物理法则定义，不需要描述状态空间。</p>
+</blockquote>
+<p>OOP中的封装、继承等特征非常重要。在非因果建模中也是。封装意味着，人们可以在不知道模型实现细节的情况下，通过组合来使用模型。信息细节被隐藏，参考连接器变量就可以写模型（公式），不需要去假设接下来它会如何被连接。继承可以用于在原有类之上衍生出新类等，这样，已有的代码（模型/公式）可以被复用。</p>
+<p>从建模人员的角度来看，他们需要将模型构建地尽可能靠近现实模型。在建模语言中，非常重要的是，模型类能够直接被物理法则定义，而不必要对状态空间进行描述（state space description），如<span class="arithmatex">\(dx/dt=f(x,t)\)</span>。</p>
+<p>例如Modelica中，基本的结构体就是类，包括一些含有约束的类：class, model, block, function, package, type等等。</p>
+<h2 id="3-">3 - 例子</h2>
+<h3 id="31-">3.1 - 数学模型</h3>
+<p>以下图为例进行建模：</p>
 <ul>
-<li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/bond-graph-modelling-method/">3 Bond Graph Modelling Method</a></li>
-<li><a href="https://pressbooks.bccampus.ca/engineeringsystems/chapter/building-bond-graph-models-general-procedure-and-application/">4 Building Bond Graph Models: General Procedure and Application</a></li>
-<li><a href="https://handwiki.org/wiki/Bond_graph">Bond Graph</a></li>
+<li>双摆的x轴平衡，x方向加速度与小车给的反作用力：<span class="arithmatex">\(m\ddot x_g=H\)</span>，其中，<span class="arithmatex">\(x_g=x+lsin\theta\)</span></li>
+<li>双摆的y轴平衡，y方向的重力加速度和小车给的反作用力：<span class="arithmatex">\(m\ddot y_g=V-mg\)</span>，其中，<span class="arithmatex">\(y_g=lcos\theta\)</span></li>
+<li>双摆的旋转运动平衡：<span class="arithmatex">\(I\ddot \theta=VLsin\theta-Hlsin\theta\)</span></li>
+<li>小车上的受力平衡，b是阻力：<span class="arithmatex">\(M\ddot x+b\dot x=F-H\)</span></li>
+</ul>
+<p><img alt="cart-ex" src="../assets/cart-example.png" /></p>
+<p>合并以上方程得到系统的数学模型：</p>
+<p><span class="arithmatex">\(\begin{cases}(M+m)\ddot x+b \dot x+ml\ddot \theta cos\theta-ml\dot \theta^2sin\theta=F\\(I+ml^2)\ddot \theta +ml\ddot xcos\theta -mglsin\theta =0\end{cases}\)</span></p>
+<h3 id="32-">3.2 - 控制模型</h3>
+<p>都一样</p>
+<h3 id="33-simulink">3.3 - 因果建模(Simulink)</h3>
+<h3 id="34-modelica">3.4 - 非因果建模(Modelica)</h3>
+<h3 id="35-">3.5 - 优缺点比较</h3>
+<p>对比以Simulink为代表的因果模型和以Modelica建模为代表的非因果建模：</p>
+<p>因果模型缺点</p>
+<ul>
+<li>直观性：没有表示物理模型的拓扑结构，无法直接观察小车、双摆、阻尼器等</li>
+<li>表达性：块有一个唯一的数据流方向，模型中的组件有很多混合表达</li>
+<li>复用性：：建立的模型只能用于该场景</li>
+<li>兼容性：与因果模型（如Modelica）不兼容</li>
+<li>知识成本：需要的知识更多，问题只会由更有经验的研发人员检查出来</li>
+<li>风险性：代数环（algebraic loop），数值特性不好，有风险，或者只能从代数上消除代数环（Dymola就这么做的）</li>
+<li>复杂性：图表没有文字描述层，难以处理很复杂的模型系统</li>
+</ul>
+<p>非因果模型优点</p>
+<ul>
+<li>直观性：物理模型和计算器中的模型连接直观透明</li>
+<li>复用性：所有的组件都可以通过重新配置而重用</li>
+<li>复杂性：可以处理很复杂的模型</li>
+</ul>
+<p>Simulink对比Modelica</p>
+<ul>
+<li>Simulink建模更适合于设计和实现控制模式，因为它有更多的基础组件和工具箱，例如Control System Box，优化工具箱等等。</li>
+<li>Modelica的优势在于，在物理建模时，代数操作的概念和特别定义的连接器带来了许多优势。在教学中更有用，理解库不需要很深的知识。</li>
+</ul>
+<h2 id="_4">学习资料</h2>
+<ul>
+<li><a href="https://www.researchgate.net/publication/241154430_Continuous_systems_modelling_education_-_Causal_or_acausal_approach">Continuous systems modelling education - Causal or acausal approach?</a></li>
 </ul>
 
 
@@ -2347,7 +2164,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 动态系统建模仿真" rel="prev">
+        <a href="../bond-graph-modeling-solve/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 键合图建模求解" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2356,20 +2173,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              动态系统建模仿真
+              键合图建模求解
             </div>
           </div>
         </a>
       
       
         
-        <a href="../bond-graph-modeling-solve/" class="md-footer__link md-footer__link--next" aria-label="Next: 键合图建模求解" rel="next">
+        <a href="../../fsm/concept/" class="md-footer__link md-footer__link--next" aria-label="Next: 概念" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              键合图建模求解
+              概念
             </div>
           </div>
           <div class="md-footer__button md-icon">
