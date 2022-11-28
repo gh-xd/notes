@@ -355,18 +355,12 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../..">介绍</a>
-          
-            <label for="__nav_1">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -377,20 +371,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
-        关于
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -548,6 +528,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -568,6 +552,34 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/linear-system/gauss-elimination/" class="md-nav__link">
+        高斯消元
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/linear-system/LU-factorization/" class="md-nav__link">
+        LU分解
+      </a>
+    </li>
+  
+
             
           
             
@@ -2097,6 +2109,18 @@
 <p>所以键合图到底可不可以做非因果建模？</p>
 <h2 id="_6">多物理系统</h2>
 <p>BG建模方法中与不同系统相关的模拟量和单位：</p>
+<p>机械系统中：</p>
+<ul>
+<li>C/R元素给系统作用力(e)，收到速度(f)。目的是拿到速度(f)的表达式，因为它是位移(q)导数的表达式<span class="arithmatex">\(\displaystyle\frac{dx}{dt}=v\rightarrow \dot q=f...p...\)</span></li>
+<li>I元素给系统作用速度(f)，收到力(e)。目的是拿到力(e)的表达式，因为它是动量(p)导数的表达式<span class="arithmatex">\(\displaystyle\frac{dP}{dt}=F\rightarrow \dot p=e...q...\)</span></li>
+<li>连立<span class="arithmatex">\(q\)</span>和<span class="arithmatex">\(p\)</span>的微分方程组可以求结果</li>
+</ul>
+<p>电学系统中：</p>
+<ul>
+<li>C/R元素给系统作用电压(e)，收到电流(f)。目的是拿到电流(f)的表达式，因为它是电荷(q)导数的表达式<span class="arithmatex">\(\displaystyle\frac{dq}{dt}=i\rightarrow \dot q=f...p...\)</span></li>
+<li>I元素给系统作用电流(f)，收到电压(e)。目的是拿到电压(e)的表达式，因为它是磁通量(p)导数的表达式<span class="arithmatex">\(\displaystyle\frac{d\psi}{dt}=E\rightarrow \dot p=e...q...\)</span>（闭合电路中电动势的大小，和穿过这一电路的磁通量的变化率成正比。磁通量的的物理意义是，穿过一个面的磁感线的条数。）</li>
+<li>连立<span class="arithmatex">\(q\)</span>和<span class="arithmatex">\(p\)</span>的微分方程组可以求结果</li>
+</ul>
 <table>
 <thead>
 <tr>

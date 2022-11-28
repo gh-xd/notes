@@ -355,18 +355,12 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../..">介绍</a>
-          
-            <label for="__nav_1">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -377,20 +371,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
-        关于
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -641,6 +621,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -661,6 +645,34 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linear-system/gauss-elimination/" class="md-nav__link">
+        高斯消元
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linear-system/LU-factorization/" class="md-nav__link">
+        LU分解
+      </a>
+    </li>
+  
+
             
           
             
@@ -1925,7 +1937,7 @@
 </ul>
 <h2 id="1">1. 显式欧拉方法</h2>
 <h3 id="11">1.1 前向欧拉法</h3>
-<p><span class="arithmatex">\(u_{n+1}=u_n+h*f(x_n,u_n) \qquad (1)\)</span></p>
+<p><span class="arithmatex">\(u_{n+1}=u_n+hf(x_n,u_n) \qquad (1)\)</span></p>
 <p>属于单步线性法。线性方程，直接迭代</p>
 <h3 id="12">1.2 改进欧拉法</h3>
 <p>欧拉法用梯形公式表达<span class="arithmatex">\((1)\)</span></p>
@@ -1948,6 +1960,8 @@ k_3=f(y_n + h\displaystyle\frac{k_2}{2}, t_n+\frac{h}{2})
 k_4=f(y_n+hk_3, t_n + h)
 \end{cases}\)</span></p>
 <h2 id="2">2. 隐式欧拉方法</h2>
+<p><span class="arithmatex">\(y_{n+1}=y_n+hf(y_{n+1},x_{n+1})\)</span></p>
+<p>相比于显式欧拉<span class="arithmatex">\(y_{n+1}=y_n+hf(y_{n},x_{n})\)</span>，需要求解的<span class="arithmatex">\(y_{n+1}\)</span>在函数<span class="arithmatex">\(f\)</span>里面，所以需要对<span class="arithmatex">\(f\)</span>进行泰勒展开：</p>
 <h2 id="x">x. 线性差分方程</h2>
 
 

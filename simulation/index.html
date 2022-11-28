@@ -355,18 +355,12 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="..">介绍</a>
-          
-            <label for="__nav_1">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -377,20 +371,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        关于
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -548,6 +528,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -568,6 +552,34 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/linear-system/gauss-elimination/" class="md-nav__link">
+        高斯消元
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/linear-system/LU-factorization/" class="md-nav__link">
+        LU分解
+      </a>
+    </li>
+  
+
             
           
             
@@ -1805,6 +1817,129 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    建模和仿真
+  </a>
+  
+    <nav class="md-nav" aria-label="建模和仿真">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    建模和仿真过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    抽象化和形式
+  </a>
+  
+    <nav class="md-nav" aria-label="抽象化和形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    系统论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    形式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    形式的分类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    形式通用描述
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    多形式建模
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    耦合模型转换
+  </a>
+  
+    <nav class="md-nav" aria-label="耦合模型转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    形式转换图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devs" class="md-nav__link">
+    DEVS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    元建模
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    多范式建模应用论文
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1856,6 +1991,228 @@
 <p>例如图形学中的CFD、工程中的FEM，它们模拟的对象是连续介质的微观层面，有位置、时间、场的引入，是关于物理量本身的模拟仿真。而工厂和生产线的OEE、流程和成本的建模，涉及离散事件/流程的属性，以及通过流程关系和环境交互，最终仿真出离散系统的效果呈现，属于中等直观层面的模拟仿真。供应链的模拟也一样。市场竞争和人口动态学接触较少。</p>
 <p><img alt="sim" src="assets/sim.png" /></p>
 <p><strong>Fig. B</strong> 模拟仿真的一些应用举例</p>
+<h2 id="_4">建模和仿真</h2>
+<h3 id="_5">概念</h3>
+<ul>
+<li>真实世界的实体 (Real world entity)</li>
+<li>基本模型 (base model)：真实实体属性和行为的抽象表达，描述物体的方方面面 (facets)</li>
+<li>系统 (system)：真实世界中<strong>特定条件</strong>下的物体，只考虑特定的行为</li>
+<li>实验框架 (expertimental frame)：真实或虚拟的有限个情况 (limited circumstances)，取决于实验需要观测的东西</li>
+<li>一体模型（lumped model)：给定实验框架下系统的抽象表达，一体模型反应的是系统结构的特定属性和行为</li>
+<li>实验 (experiments)：可以/不用对系统进行操作，然后观测，得到测量结果</li>
+<li>模拟 (simulation)：对一体模型以给定的形式 (formalism) 的模拟，计算输入输出行为动态</li>
+<li>验证 (verification)：检查模拟和一体模型的一致性</li>
+<li>确认 (validation)：对比真实的观测和模拟的结果</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>真实世界</th>
+<th>虚拟世界</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真实实体 (Real world entity)</td>
+<td>基本模型 (Base model)</td>
+<td></td>
+</tr>
+<tr>
+<td>真实系统 (System)</td>
+<td>一体模型 (Lumped model)</td>
+<td></td>
+</tr>
+<tr>
+<td>真实实验数据观察 (experiment observation data)</td>
+<td>模拟仿真结果 (Simulation data)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">建模和仿真过程</h3>
+<p>确定实验框架 &gt; 得到一些参数模型候选者 &gt; 特征化结构 &gt; 得到特定的参数模型 &gt; 参数估计 &gt; 得到有参数值有意义的模型 &gt; 模拟仿真 &gt; 得到仿真测量结果 &gt; 确认</p>
+<h2 id="_7">抽象化和形式</h2>
+<h3 id="_8">系统论</h3>
+<p>系统论中定义了因果的、确定的系统模型<span class="arithmatex">\(SYS\)</span>，抽象包含：</p>
+<p><span class="arithmatex">\(\Tau\)</span> 时间基，<span class="arithmatex">\(X\)</span> 输入集，<span class="arithmatex">\(\omega:\Tau\rightarrow X\)</span> 输入的一段，<span class="arithmatex">\(Q\)</span> 状态集，<span class="arithmatex">\(\delta:\Omega\times Q\rightarrow Q\)</span> 转移方程，<span class="arithmatex">\(Y\)</span> 输出集，<span class="arithmatex">\(\lambda: Q\rightarrow Y\)</span>输出方程</p>
+<p>简单说就是，根据仿真的目的，选定系统的一系列输入作为输入集<span class="arithmatex">\(X\)</span>。然后，考虑到真实事件都与时间相关，也引入时间基<span class="arithmatex">\(T\)</span>。系统的输入和时间有关系，所以对应一小段时间的的一小段输入集就是<span class="arithmatex">\(\omega\)</span>。鉴于系统是动态的在变化的，每一个<span class="arithmatex">\(\omega\)</span>都会在一个时间段后被一个抽象的函数“处理”，从而输出这个系统的行为，这个函数就是转移方程<span class="arithmatex">\(\delta\)</span>。转移方程可以定义为特定事件/条件，那就是有事件排程 (scheduling) 的离散事件系统。如果不去定义状态转移，计算机中系统或者物体的行为总归还是得要定义，否则没法模拟仿真，那转移方程就是取定义系统的本构方程。输出方程<span class="arithmatex">\(\lambda\)</span>可以设置也可以不设置。先说设置，如果目标是对仿真的特定行为进行观测，那就不需要事无巨细的仿真数据，比如设定值到达某个条件就会输出某个系统状态，这就是<span class="arithmatex">\(\lambda\)</span>。然后是不设置，假如我们不去限定仿真的输出，让它跑出所有的数据，物体在计算机中自由运动，那就不需要输出方程了。</p>
+<h3 id="_9">形式</h3>
+<blockquote>
+<p>DEVS as a common denominator for multi-formalism hybrid systems modelling</p>
+</blockquote>
+<p>DAE, Bond graph, Forrester System Dynamics, Petri Nets, Finite State Automata, DEVS, State Charts, Queueing network...</p>
+<h3 id="_10">形式的分类</h3>
+<p>对于连续时间下的连续模型，一般得用微分方程形式的模型，这里通用表达为代数微分方程 (Differential algebraic equations)；非连续时间的连续模型，用差分方程 (Difference equations) 描述；考虑当下时间的连续模型，也就是某一刻的行为计算和求解，就是求解代数方程 (Algebraic equations)。看离散模型，可以把这个真实世界的情况考虑做离散模型，连续时间下的离散模型，朴素物理 (naive physics)？离散时间下的离散系统，可以用Petri网络或者有限状态机的形式来描述。相对应的，计算和求解当下的状态，需要用整数方程 (Integer euqations) 的形式来表达。</p>
+<table>
+<thead>
+<tr>
+<th>Q</th>
+<th>T continuous</th>
+<th>T discrete</th>
+<th now="now">T</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continuous model</td>
+<td>DAE</td>
+<td>DE</td>
+<td>Algebraic Equations</td>
+</tr>
+<tr>
+<td>Discrete (world view) model</td>
+<td>Discrete-event naive physics</td>
+<td>FSA, Petri Nets</td>
+<td>Integer equations</td>
+</tr>
+<tr>
+<td>Non-causal model</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>连续模型对于物理系统来说是有意义的：机械、电气、液压系统等等</p>
+<p>上表没有包含non-causal模型，non-causal model describes <strong>conservation laws</strong> and <strong>constraints</strong> without imposing a computational causality.</p>
+<h3 id="_11">形式通用描述</h3>
+<p>因果的、确定的系统用刚刚提到的<span class="arithmatex">\(SYS\)</span>形式描述。</p>
+<p>离散事件的通用形式是<strong>离散事件系统规范</strong> (DEVS - Discrete-even system specification)。</p>
+<h2 id="_12">多形式建模</h2>
+<p>复杂系统的特点是，组件数量众多且多样化。教授的ESPRIT基础研究小组发文认为，仅仅研究多种多样的组件和为它们建模的特定形式是不够的，更有必要的是<strong>整个系统</strong>关乎属性和行为的问题（系统多了，多形式也就产生了）。</p>
+<p>举一个复杂系统的例子：生产纸张的纸浆厂需要树木作为原材料并且排出污水，1996年有文章使用GPSS模型，或者说是离散事件调度系统的方法对其流程之间的互动建模；废水处理厂处理纸浆厂的污水，另一些固体废料则带到垃圾填埋场。部分净化完的水注入到湖水里，这个系统是用代数微分方程进行建模的，方程描述的是废水处理厂里的生物化学反应。渔场在湖水里养鱼，使用藻类喂养，藻类则对污水十分敏感。湖水也用来灌溉树木，树木则为纸浆厂供给木材原料。这个生态系统使用福瑞斯特提出的系统动力学 (Forrester System Dynamics) 进行建模，其中，渔场对纸浆厂工人的工作也有影响，也被建模进去。</p>
+<h2 id="_13">耦合模型转换</h2>
+<p>耦合模型 (CM - coupled model): <span class="arithmatex">\(CM\equiv&lt;id, interface,S,C&gt;\)</span></p>
+<ul>
+<li>
+<p>模型识别 (model identifier): id可以是名字也可以是指向/引用，都行。</p>
+</li>
+<li>
+<p>接口 (interface): 接口是一系列对外的连接器 (connector) 或端口 (port)，与port有关的是被允许的值/因果性。有意义的因果性例如<span class="arithmatex">\({in,out,inout}\)</span>。</p>
+</li>
+<li>
+<p>子模型集 (sub set of models): 包含了一系列子模型/子模型的指向</p>
+</li>
+<li>
+<p>耦合信息 (coupling information): 模型之间的耦合信息储存在<span class="arithmatex">\(C\)</span>图结构。<strong>非因果模型</strong>和<strong>连续模型</strong>的图是<strong>无向图</strong>，因果模型的是有向图。某些情况下，图是额外的信息。在离散事件模型中，需要一个决定方程来选择同时发生的事件。</p>
+</li>
+</ul>
+<p>如果所有的子模型都以同样的形式<span class="arithmatex">\(F\)</span>被描述的话，或许可以用一个形式为<span class="arithmatex">\(F\)</span>的原子模型 (atomic model) 自底向上递归地来替代耦合模型。这种情况可以叫做耦合封闭 (closed under coupling / under composition)。<mark>这种闭包 (closure) 特性需要对每种<span class="arithmatex">\(F\)</span>都进行证明</mark>，这种特性一般都由构建保留。对于同样形式<span class="arithmatex">\(F\)</span>的耦合模型：</p>
+<ul>
+<li>
+<p>在连续系统中，例如DAE方程，模型之间的连接<span class="arithmatex">\({connection(port_i,port_j)}\)</span>被<span class="arithmatex">\(port_i=port_j\)</span>的耦合方程替换掉。在键合图中形式中，有<span class="arithmatex">\(port_i=port_j\)</span>这种形式（例如基尔霍夫电压定律），也有所有连接值的和为零的情况（基尔霍夫电流定律）。</p>
+</li>
+<li>
+<p>在离散系统中，例如离散事件模型，实现闭包就涉及到一个正确时序的子模型事件排程(correct time-ordered scheduling of sub-models events)。<mark>我就是这么想的，大包包小包。。。</mark></p>
+</li>
+</ul>
+<p>对于不同形式的耦合模型，分不同情况有不同的应对方式：</p>
+<ul>
+<li><strong>超形式</strong> (super-formalism) <strong>并归</strong> (subsume)子模型的不同形式，于是所有的子模型都用同一种形式表达。混合DAE (Vangheluwe本人)和DEVS&amp;DESS (Zeigler et al., 2000) 形式集成了连续和离散模型结构。真正增加了表达性和降低复杂度的超形式几乎没有。键合图 (Cellier, 1991) 是一个集成了不同领域的好例子。</li>
+<li><strong>同形式</strong> (common formalism) <strong>转换</strong> (transformation)不同的子模型形式到相同的形式。转换到什么形式，取决于建模和仿真的目的，提出的问题是什么。例如，系统动态学和DAE两者最近的同形式是DAE形式，将系统动态学转换到一系列DAE，并且使用DAE形式的闭包特性。通常，目标形式是最终的轨迹层级。</li>
+<li><strong>轨迹层</strong> (trajectory level) 出现在联合仿真中 (co-simulation)，每个子模型都在特定形式模拟器 (formalism-specific simulator)中进行模拟，模型之间的互动发生在轨迹层。相较于在仿真之前将子模型转换到同一种形式<span class="arithmatex">\(F\)</span>，这种形式从软件工程的角度来说舍弃掉了许多信息，提出的问题只能在轨迹层得到解答。此外，对于连续模型来说有速度和数值精度问题，所以这种方式仅对离散模型有意义。在这个领域，该方法是DoD High Level Architecture (HLA)可互操作性的基础。</li>
+</ul>
+<p>转换到同一种形式有以下步骤：</p>
+<ol>
+<li>对多范式模型，检查模型一致性（例如因果性和连接端口的类型匹配）</li>
+<li>对所有同形式模型进行聚类</li>
+<li>对每个聚类进行闭包操作</li>
+<li>在形式转换图 (FTG - Formalism Transformation Graph) 中寻找“最佳”共同形式。最坏的的情况是在轨迹层进行，如同联合仿真一样。寻找最佳共同形式的大致标准是，转换速度、优化空间等。</li>
+<li>将所有子模型转换到相同的形式</li>
+<li>用转换完的共同类型进行闭包操作</li>
+</ol>
+<p>模型转换也有副作用，因为对一个系统的某些问题只能在某种形式下被解答，虽然系统可以在一个扁平的模型下有更好的优化空间以及需要更少的仿真核心。但毕竟如果模型的作用是和人进行知识的交换，还是需要特定的独特形式来进行。</p>
+<h3 id="_14">形式转换图</h3>
+<p>FTG (Vangheluwe, 2000)</p>
+<p>节点到轨迹层的线代表的是“存在一种可以将抽象模型映射到状态轨迹的模拟器”。另外，迭代仿真可以看作是模型转换的一种特殊形式？</p>
+<blockquote>
+<p>DEVS as a common denominator for multi-formalism hybrid systems modelling</p>
+</blockquote>
+<p>在混合系统模型中，形式转换收敛到一个共同分母 (common denominator) 从而统一连续和离散系统。通常情况下，它是一种这样的形式：事件排程/状态事件定位/DAE形式和对应的求解器 (event-scheduling/state-event/DAE formalism and corresponding solver)，但也有另一种做法，可以将所有形式，特别是连续形式，映射到DEVS。<strong>连续模型中的状态变量被离散化，而不是时间被离散化，并且DEVS的转移方程从一个离散的状态值进展到一个上面/下面的状态值，作为输出，直到下一次转移</strong>。</p>
+<p>系统动态 (System dynamics)的语义通过将状态值映射到ODE方程来定义。积/和等操作被映射到相应的代数方程上，而耦合 (coupling) 被映射到代数等式上。</p>
+<p>FTG图中虚线代表有相应的求解器/仿真内核，它们可以仿真模型，生成轨迹 (trajectory)。轨迹的意思是模型在数据形式 (data formalism)上的表示，可以理解为time/value元组。在指称意义上，遍历图使得模型的语义 (semantic of models)在形式中显式：<strong>模型/形式的含义可以由映射到某个已知形式来给出</strong>。在操作意义上，一个映射描述模型的解释是如何达到的。如果轨迹形式是映射的目标，那么模型解释就是模型仿真。该方法的好处是，引入新的形式只需要一个可以将其映射到最近形式的映射即可。</p>
+<h3 id="devs">DEVS</h3>
+<p>对于discrete-event一类的形式，模型的描述在抽象层，事件是连续的，有界 (bounded time interval)，只有有限个数量的事件。只有在事件时 (event-time)，状态变量才会立即变化。在事件之间，状态保持不变。不像连续模型，状态变量随着时间连续变化。DEVS是离散事件仿真的基础，比较知名的离散事件形式 (discrete-event formalism) 有：事件排程 (Event Scheduling)，事件扫描 (Activity Scanning), 流程互动 (Process Interaction)都可以在DEVS进行表达。这使得DEVS是表示离散事件模型的“共同分母”。</p>
+<p>DEVS可以在两个层级上描述系统动态：</p>
+<ul>
+<li>低层级：原子级DEVS将离散事件系统的自主行为描述成(1) 一系列有顺序状态的确定的转移 (a sequence of deterministic transitions between sequential states)，并且(2)描述它如何对外部输入的事件进行反应，以及(3)它如何产生/产生什么输出事件。</li>
+<li>高层级：耦合的DEVS将系统描述成组件连接 (coupled components) 而成的<strong>网络</strong>(network)，其中每一个组件可以是原子级DEVS，也可以是耦合DEVS。</li>
+</ul>
+<p>组件之间的连接描述了组件间如何互相影响。一个组件的输出事件称为另一个事件的输入事件。鉴于有原子级和耦合的DEVS，通过闭包 (closed under coupling)，对每个耦合级DEVS都可以构建一个结果性的原子级DEVS (a resultant atomic DEVS)，如此一来，任何DEVS模型都可以被替换成对等的原子级DEVS (equivalent atomic DEVS)，</p>
+<h2 id="_15">元建模</h2>
+<p>元建模 (meta-modelling) 允许对形式间的细微差别进行显式的推理，它可以通过对形式的句法和语义 (syntax and semantics) 进行显式地建模来实现。</p>
+<p>Entities (states, transition): formalism的实例，例如状态图、Petri Net里面的实例</p>
+<p>Attributes (actions and conditions): entity实例的属性</p>
+<p>Relationship: entity和attribute的关系，每个renlation有向连接到一个entity作为source，一个entity作为destination</p>
+<p>Object: 一组entities和relationships，每一个都有很多attributes</p>
+<p>构建有三个层级：</p>
+<ul>
+<li>元元模型 (meta-meta models ) ：元元模型对应的是元元形式 (meta-meta formalism)，这一层是所有模型形式的基模型，通过用户的输入配置，元模型处理器 (meta-model processor) 可以生成元模型 (meta models) 和元形式 (meta formalism)，</li>
+<li>元模型 (meta models)：这一层是定义了特定模型形式，通过用户的输入配置，元模型处理器可以生成模型实例，例如FSA形式的模型</li>
+<li>模型 (models)：可以直接拿来用了</li>
+</ul>
+<h2 id="_16">多范式建模应用论文</h2>
+<ul>
+<li><strong>MBSE</strong> (extending FTG/PM)<ul>
+<li>Multi-paradigm modelling for model based systems engineering : extending the FTG + PM, 2022</li>
+</ul>
+</li>
+<li><strong>CPS</strong><ul>
+<li>Multi-paradigm modelling for cyber-physical systems : a descriptive framework, 2021</li>
+<li>Multi-paradigm modelling for cyber-physical systems : foundations, 2020</li>
+<li>Multi-paradigm modelling of cyber-physical systems, 2018</li>
+<li>MPM4CPS : multi-paradigm modelling for cyber-physical systems, 2016</li>
+</ul>
+</li>
+<li><strong>Engineering Process</strong> (FTG/PM)<ul>
+<li>FTG+PM : describing engineering processes in multi-paradigm modelling, 2020</li>
+</ul>
+</li>
+<li><strong>Statecharts</strong><ul>
+<li>Statecharts : a formalism to model, simulate and synthesize reactive and autonomous timed systems, 2020</li>
+</ul>
+</li>
+<li><strong>Live modelling</strong><ul>
+<li>A Multi-Paradigm Modelling approach to live modelling, 2019</li>
+</ul>
+</li>
+<li><strong>Petri nets</strong><ul>
+<li>Petri nets in multi-paradigm modelling, 2019</li>
+<li>Computer aided multi-paradigm modelling to process petri-nets and statecharts, 2002</li>
+</ul>
+</li>
+<li><strong>Engineering model debugging</strong><ul>
+<li>A multi-paradigm modelling approach for engineering model debugging environments, 2018</li>
+</ul>
+</li>
+<li><strong>Service interaction in Engineering Process</strong><ul>
+<li>A multi-paradigm approach for modelling service interactions in model-driven engineering processes, 2018</li>
+</ul>
+</li>
+<li><strong>DEVS</strong><ul>
+<li>DEVS modelling and simulation of a multi-paradigm modelling tool, 2018</li>
+</ul>
+</li>
+<li><strong>Equation-based</strong><ul>
+<li>Multi-paradigm language engineering and equation-based object-oriented languages, 2008</li>
+</ul>
+</li>
+<li><strong>Traffic networks</strong><ul>
+<li>Computer automated multi-paradigm modelling for analysis and design of traffic networks</li>
+</ul>
+</li>
+</ul>
+<h2 id="_17">参考资料</h2>
+<ul>
+<li>https://repository.uantwerpen.be/desktop/irua</li>
+<li><a href="https://www.cs.mcgill.ca/~hv/publications/02.AIS.campam.pdf">An introduction to multi-paradigm modelling and simulation</a></li>
+</ul>
 
 
 

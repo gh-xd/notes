@@ -1,0 +1,2178 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://gh-xd.github.io/notes/tech-concepts/sysml/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>SysML - 研究笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sysml" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="研究笔记" class="md-header__button md-logo" aria-label="研究笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            研究笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SysML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/notes-zh/" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        介绍
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../math/diff-operators/" class="md-tabs__link">
+        数学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../simulation/" class="md-tabs__link">
+        模拟仿真
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programming/design-pattern/" class="md-tabs__link">
+        编程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../algorithm/" class="md-tabs__link">
+        算法
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cicd/" class="md-tabs__link">
+        技术概念
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tools/git/" class="md-tabs__link">
+        工具
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="研究笔记" class="md-nav__button md-logo" aria-label="研究笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    研究笔记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">介绍</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="介绍" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          介绍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/diff-operators/" class="md-nav__link">
+        微分算子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          常微分方程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="常微分方程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          常微分方程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/ode/ode/" class="md-nav__link">
+        常微分方程求解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/ode/ode-python/" class="md-nav__link">
+        Python求解器
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../math/linear-system/">线性系统</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="线性系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          线性系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/linear-system/gauss-elimination/" class="md-nav__link">
+        高斯消元
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/linear-system/LU-factorization/" class="md-nav__link">
+        LU分解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/linear-system/jacobi-iteration/" class="md-nav__link">
+        雅可比迭代
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/linear-system/gauss-seidel-iteration/" class="md-nav__link">
+        高斯-塞德尔迭代
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/euler-eq/" class="md-nav__link">
+        欧拉公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/tensor/" class="md-nav__link">
+        张量
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          偏微分方程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="偏微分方程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          偏微分方程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/pde/pde-history/" class="md-nav__link">
+        历史
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/pde/pde/" class="md-nav__link">
+        偏微分方程求解
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/galerkin/" class="md-nav__link">
+        伽辽金法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/distances/" class="md-nav__link">
+        距离度量
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/">模拟仿真</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="模拟仿真" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          模拟仿真
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/des/">离散事件模拟仿真</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散事件模拟仿真" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散事件模拟仿真
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/fem/">有限元仿真</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="有限元仿真" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          有限元仿真
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          流体仿真
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="流体仿真" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          流体仿真
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/cfd/" class="md-nav__link">
+        基础概念
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/dem/">离散元</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="离散元" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          离散元
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/graphics/">图形学物理仿真</a>
+          
+            <label for="__nav_3_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="图形学物理仿真" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          图形学物理仿真
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/graphics/mss/" class="md-nav__link">
+        弹簧质点系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/graphics/lfem/" class="md-nav__link">
+        线性有限元
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/graphics/sph/" class="md-nav__link">
+        光滑粒子流体动力
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/graphics/mpm/" class="md-nav__link">
+        物质点法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../simulation/ds/">动态系统</a>
+          
+            <label for="__nav_3_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="动态系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          动态系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/ds/bond-graph/" class="md-nav__link">
+        键合图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/ds/bond-graph-modeling-solve/" class="md-nav__link">
+        键合图建模求解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/ds/causal-acausal/" class="md-nav__link">
+        因果和非因果建模
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          有限状态机
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="有限状态机" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          有限状态机
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/fsm/concept/" class="md-nav__link">
+        概念
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          编程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          编程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/design-pattern/" class="md-nav__link">
+        设计模式简明版
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/python-cpp/" class="md-nav__link">
+        Python和C++混合编程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../algorithm/">算法</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="算法" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm/complexity/" class="md-nav__link">
+        复杂度
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../algorithm/dynamic-planning/">动态规划</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="动态规划" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          动态规划
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          技术概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技术概念" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          技术概念
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cicd/" class="md-nav__link">
+        CI/CD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../mlops/">MLOps</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="MLOps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          MLOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工具" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          CMake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CMake" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          CMake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/cmake/workflow/" class="md-nav__link">
+        CMake流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/cmake/totools/" class="md-nav__link">
+        链接工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/cmake/tips/" class="md-nav__link">
+        实用经验
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          谷歌云平台
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="谷歌云平台" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          谷歌云平台
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/gcp/tfjob/" class="md-nav__link">
+        TFJob部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/gcp/canary-deploy/" class="md-nav__link">
+        Canary部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/gcp/vertex-ai/" class="md-nav__link">
+        Vertext AI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sysml" class="md-nav__link">
+    1 - SysML需求图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sysml" class="md-nav__link">
+    2 - SysML块定义图
+  </a>
+  
+    <nav class="md-nav" aria-label="2 - SysML块定义图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-" class="md-nav__link">
+    2.1 - 模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    2.2 - 模块关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-" class="md-nav__link">
+    2.3 - 执行者
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-" class="md-nav__link">
+    2.4 - 值类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-" class="md-nav__link">
+    2.5 - 约束模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-" class="md-nav__link">
+    2.6 - 注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sysml" class="md-nav__link">
+    3 - SysML内部块图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sysml" class="md-nav__link">
+    4 - SysML参数图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sysml" class="md-nav__link">
+    5 - SysML包图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sysml" class="md-nav__link">
+    6 - SysML用例图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-sysml" class="md-nav__link">
+    7 - SysML活动图
+  </a>
+  
+    <nav class="md-nav" aria-label="7 - SysML活动图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    活动元素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    令牌流
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本动作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    对象节点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    边
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    四种特别类型的动作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-sysml" class="md-nav__link">
+    8 - SysML序列图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-" class="md-nav__link">
+    9 - 状态机图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    学习
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sysml">SysML</h1>
+<p>所有的SysML图只是一种视图，有如下图：</p>
+<ul>
+<li>需求图 Requirement Diagram (req)</li>
+<li>结构图（静态视图）<ul>
+<li>定义块图 Block Definition Diagram (bdd)</li>
+<li>内部块图 Internal Block Diagram (idb)</li>
+<li>参数图 Parametric Diagram (par)</li>
+<li>包图 Package Diagram (pkg)</li>
+</ul>
+</li>
+<li>行为图（动态视图）<ul>
+<li>用例图 Use Case Diagram (uc)</li>
+<li>活动图 Activity Diagram (act)：侧重功能执行顺序、逻辑、角色划分</li>
+<li>序列图 Sequence Diagram (sd)：侧重交互，也能描述触发</li>
+<li>状态机图 State Machine Diagram (stm)：侧重状态构成和状态切换条件</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-sysml">1 - SysML需求图</h2>
+<p>Requirement diagram</p>
+<p>需求图是SysML的主要介质，传达需求之间的可追溯性，系统模型从需求到结构的可追溯性。</p>
+<p>有7种需求关系，包括需求-需求关联和需求-其他模型元素关联。</p>
+<ul>
+<li>复合关系（需求-需求）：包括子需求，复合关系的声明会直接执行所有子需求 —(+)</li>
+<li>派生关系（需求-需求）：deriveReqt，下一级的需求，例如是车辆加速-&gt;发动机动力 ---&gt;</li>
+<li>细化关系（需求-其他）：refine，使用用例/活动图等其他元素近一步细化需求 ---&gt;</li>
+<li>满足关系（任何-需求）：satisfy，描述了模型如何满足需求（并不是指满足了），它只是将需求分配给结构的一种机制 ---&gt;</li>
+<li>验证关系（testCase等-需求）：verify，表示检验方法的机制 ---&gt;</li>
+<li>复制关系（需求-需求）：copy，例如产品组的法规要求、合同要求 ---&gt;</li>
+<li>追溯关系（需求-其他）：trace，用于规范树或者连接源文档等</li>
+</ul>
+<h2 id="2-sysml">2 - SysML块定义图</h2>
+<p>在块定义图block definition diagram (BDD) 中可以显示其他模型元素，例如模块、执行者、参数约束等。BDD也会出现在其他8种SysML图中。BDD中的元素叫<strong>定义元素</strong>。定义元素形成了系统模型中其他内容的基础。</p>
+<p>定义元素的关系（关联、泛化和依赖）非常重要。</p>
+<h3 id="21-">2.1 - 模块</h3>
+<p>创建Block等于创建一个类型，名称:类型，模块的注释为&lt;<block>&gt;</p>
+<ul>
+<li>结构特性：或者叫属性<ol>
+<li>组成部分属性：parts &amp; values，模块是由组成部分属性构成的。硬件领域，所属关系实指物理组成关系；软件领域，所属关系是指一个对象负责创建和销毁另一个对象，当为一个组成部分释放内存，组成部分的内存也都被释放。</li>
+<li>引用属性：references&amp;values，“需要”模块外部的一个结构，或者是提供了一种服务，或者是交换事件、能量或数据。</li>
+<li>值属性：values，可以代表一个类型例如布尔值、字符串，特别是和约束属性结合的时候，可以构建系统的数学模型。</li>
+<li>约束属性：constraints&amp;values，约束关系代表一个数学关系，会使用一系列的值属性。约束属性的类型必须是一个存在于其他地方的约束模块的名称。虽然直接在属性框里制定约束表达式也没问题，仅适用于该约束不需要在别的地方重用。</li>
+<li>端口：通过端口，外部实体可以和该结构进行交互，添加了端口等于是针对它的环境创建了一个黑盒，结构内部会对客户端隐藏。端口表达交互点，可以是硬件物理对象（HDMI接口）、软件对象边界交互（消息队列、数据文件）、商业组织的交互（支付订单、邮箱）。注：SysML v1.2之前为标准端口和流端口，v1.3之后为完整端口和代理端口。<ul>
+<li>标准端口：提供/请求服务，小方块。标准端口可以拥有一种/多种类型，类型是赋予的接口。接口&lt;<interface>&gt;和模块类似也是一个元素，是客户端和提供方需要遵循的契约<ul>
+<li>提供接口用圆形⭕️</li>
+<li>请求接口用半圆</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>行为特性：模块可以执行一系列行为。操作和接收可以定义在模块上，也可以在端口上，根据设计原则定。<ol>
+<li>操作：operation，操作由调用事件触发。常见情况是它同步行为，调用者会一直等待行为结束，而SysML不是，可以把任何行为表示为操作，即使调用者没有等待它完成。如果有返回值，返回值类型需要在其他地方定义好。</li>
+<li>接收：reception，接收是由信号事件触发。信号也是一种模型元素&lt;<signal>&gt;，它可以是任意类型的事件、能量或数据，目的是要触发接收端的行为，而且信号也有属性properties。接收与操作不同的是，<strong>接收总是一种异步行为</strong>。</li>
+</ol>
+</li>
+</ul>
+<h3 id="22-">2.2 - 模块关系</h3>
+<p>模块的关系有：</p>
+<ul>
+<li>
+<p>关联：如结构特性中提到的组成部分属性和引用属性，结构直接的关联分为：</p>
+<ul>
+<li>
+<p>引用关联：BDD中引用关联是一条直线<span class="arithmatex">\(——\)</span>，有箭头表示单向访问，无箭头则是双向的。可视化箭头和引用属性等价。</p>
+</li>
+<li>
+<p>组合关联：BDD中组合关联是一条直线—和一个<strong>黑菱形</strong>。两个模块的组合关联表示结构上的分解。例如，一个卫星由一个电子电力系统、一个高度及轨道控制子系统、一个环境控制子系统和一个通信和数据子系统组成。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>泛化：BDD中泛化是直线<span class="arithmatex">\(——\Delta\)</span>。代表两种元素的继承关系。抽象的叫超类，具体的叫子类。泛化在系统中创建类型层级关系（分类树）。可以解读为“&lt;子类&gt;是一种&lt;超类&gt;”，例如“&lt;陀螺仪&gt;是一种&lt;传感器&gt;”。泛化可传递，任意深度。</p>
+<ul>
+<li>子类可以拥有超类不具备的特性</li>
+</ul>
+</li>
+<li>依赖：BDD种泛化是<span class="arithmatex">\(---&gt;\)</span>。一般创建依赖是为了可跟踪（例如需求图中所有的关系基本都是---&gt;，为的是可追溯）。例如，在元素做出变更时，可以查询模型工具，找到可能产生变更的其他元素。依赖时模型的一部分，但不是模型表示系统的一部分</li>
+</ul>
+<h3 id="23-">2.3 - 执行者</h3>
+<p>带&lt;<actor>&gt;字样。</p>
+<h3 id="24-">2.4 - 值类型</h3>
+<p>和模块一样，值类型是一种定义元素，一般会出现在模块的值属性。</p>
+<p>通常可以定义三种值类型：</p>
+<ul>
+<li>原始值类型&lt;<valueType>&gt;：没有任何属性，有四种<ul>
+<li>String</li>
+<li>Boolean</li>
+<li>Integer</li>
+<li>Real</li>
+<li>自定义（例如温度开尔文时Real的子类型）</li>
+</ul>
+</li>
+<li>结构值类型&lt;<valueType>&gt;：等于是结构体，两种或多种值类型<ul>
+<li>SysML定义了Complex类型，包括两个值属性realPart和imaginaryPart，两者都是Real</li>
+</ul>
+</li>
+<li>枚举值类型&lt;<enumeration>&gt;：只定义一系列数值，如果一个操作的类型是枚举，那么它必须是枚举中的值。</li>
+</ul>
+<h3 id="25-">2.5 - 约束模块</h3>
+<p>&lt;<constraint>&gt;，和模块一样，约束模块是一种定义元素，它定义了不二类型的约束表达（True/False）。</p>
+<p>包含约束参数parameters</p>
+<h3 id="26-">2.6 - 注释</h3>
+<p>笔记</p>
+<h2 id="3-sysml">3 - SysML内部块图</h2>
+<p>Internal Block Diagram</p>
+<h2 id="4-sysml">4 - SysML参数图</h2>
+<p>Parametric Diagram是一种特殊的内部块图，是SysML图中唯一可以表达系统设计方面的内容，用于说明系统的约束，以数学模型表示。并非一定需要使用。</p>
+<p>它关注的是<strong>值属性和约束参数之间的绑定关系</strong>。和内部块图互补了。</p>
+<p>参数图涉及的主要元素有：</p>
+<ul>
+<li>约束模块 Constraint Block &lt;<constraint>&gt;，约束表达式在约束中段constraints处显示</li>
+<li>约束属性 constraints，有名称和类型</li>
+<li>绑定连接器 Binding Connector：绑定的两端一个必须是约束参数，另一个是约束参数/值属性</li>
+</ul>
+<h2 id="5-sysml">5 - SysML包图</h2>
+<p>Package diagram</p>
+<p>pkg-包是一种通用分组机制，用于在唯一的命名空间内组织各种模型元素和相关的图，可以包含任意SysML元素。</p>
+<p>模型的组织方式由包的层级关系定义，包的层级关系将模型中的元素分配到逻辑上紧密相关的组中。</p>
+<p>在大型项目中，包图描述系统主要元素之间的关系、编译时分组机制、为元素模型提供命名空间。</p>
+<p>包可以包含其他包(containment)、从其他包引入所有元素到命名空间(Package import)、从其他包引入元素到命名空间(Element import)</p>
+<h2 id="6-sysml">6 - SysML用例图</h2>
+<p>...</p>
+<h2 id="7-sysml">7 - SysML活动图</h2>
+<p>系统的动态视图，表达随着时间推移的行为和事件发生的序列。可以表达复杂的控制逻辑。</p>
+<p>唯一一个能说明系统连续行为的图。</p>
+<p>活动图的特点：</p>
+<ul>
+<li>说明动作执行顺序</li>
+<li>只能有选择地说明哪个结构触发哪个动作</li>
+<li>有些方法需要活动图，例如添加新用例图时创建活动图（Harmony SE）</li>
+</ul>
+<h3 id="_1">活动元素</h3>
+<p>Activity是活动图中唯一可以创建的元素。它是一种行为，也是命名空间，与模块和包类似，因此可以去包含节点和边。</p>
+<h3 id="_2">令牌流</h3>
+<p>可以在活动图之间流动，可以有多个，每个令牌都有自己的类型和状态。</p>
+<h3 id="_3">基本动作</h3>
+<p>圆角矩形，action，是原子级的Activity，可执行，用自然语言描述。用边来连接。</p>
+<h3 id="_4">对象节点</h3>
+<p>矩形，node，出现在两个action之间，表示第一个action产出对象令牌，第二个action将该对象令牌作为输入。</p>
+<p>栓- 方形，pin，特殊类型的对象节点，附加在action上。</p>
+<p>活动参数 - 在活动图的外框上面，从总体上表示活动的一种输入或者输出</p>
+<p>流与非流 - </p>
+<h3 id="_5">边</h3>
+<p>两种边：</p>
+<ul>
+<li>对象流 object flow：连接两个对象节点，传输对象令牌，可以表示事件、能量或数据的实例通过action</li>
+<li>控制流 control flow：控制令牌可以达到等待它的动作。</li>
+</ul>
+<h3 id="_6">四种特别类型的动作</h3>
+<p>调用行为动作</p>
+<p>发送信号动作</p>
+<p>接收事件动作</p>
+<p>等待时间动作</p>
+<h2 id="8-sysml">8 - SysML序列图</h2>
+<p>说明系统动态行为，可以用<strong>生命线lifelines</strong>的元素给行为参与者建模，在生命线之间传递消息，为参与者<strong>交互建模</strong>，可以给约束。</p>
+<p>序列图在系统声明周期早期非常有用，说明子系统之间的交互；在末期也很重要，说明组件之间的交互。可以替换文字版的测试案例说明。</p>
+<p>生命线上可能出现6种类型的时间：</p>
+<ul>
+<li>消息发送事件</li>
+<li>消息接收事件</li>
+<li>生命线创建事件</li>
+<li>生命线销毁事件</li>
+<li>行为执行开始事件</li>
+<li>行为执行结束事件</li>
+</ul>
+<h2 id="9-">9 - 状态机图</h2>
+<p>...</p>
+<h2 id="_7">学习</h2>
+<ul>
+<li><a href="https://modelbaba.com/mbse/518.html">SysML需求图</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
